@@ -67,9 +67,10 @@
 
     <!-- View Toggle -->
     <div class="view-toggle">
-        <button>⊞</button>
-        <button>≡</button>
+        <button id="gridViewBtn" class="active">⊞</button>
+        <button id="listViewBtn">≡</button>
     </div>
+
 
     <!-- Services Section -->
     <section>
@@ -156,7 +157,7 @@
         </div>
     </section>
 
- 
+
 
 
 
@@ -213,7 +214,7 @@
         });
 
     </script>
-   <script>
+    <script>
         function filterServices(type) {
             const cards = document.querySelectorAll('.service-card');
             const buttons = document.querySelectorAll('.filter-buttons button');
@@ -233,6 +234,7 @@
             document.querySelector(`.filter-buttons button[data-filter="${type}"]`)?.classList.add('active');
         }
     </script>
+    
 
 </body>
 
