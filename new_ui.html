@@ -36,21 +36,21 @@
                     <ul id="families" class="dropdown-families"></ul>
                     <div id="subItems" class="dropdown-subitems"></div>
 
-            <!-- Products -->
-            <div class="dropdown-container" id="products-container">
-                <a href="#" class="tab" data-target="products">Products</a>
-                <div class="dropdown hidden" id="dropdown-products">
-                    <ul class="dropdown-families" id="families-products"></ul>
-                    <div class="dropdown-subitems" id="subitems-products"></div>
+                    <!-- Products -->
+                    <div class="dropdown-container" id="products-container">
+                        <a href="#" class="tab" data-target="products">Products</a>
+                        <div class="dropdown hidden" id="dropdown-products">
+                            <ul class="dropdown-families" id="families-products"></ul>
+                            <div class="dropdown-subitems" id="subitems-products"></div>
+                        </div>
+                    </div>
+
+
+                    <a href="#">Latest Offers</a>
+                    <a href="business_onboarding.html">Business Onboarding</a>
+                    <a href="#">Business Support</a>
                 </div>
-            </div>
-
-
-            <a href="#">Latest Offers</a>
-            <a href="business_onboarding.html">Business Onboarding</a>
-            <a href="#">Business Support</a>
-        </div>
-        <div class="search-icon">🔍</div>
+                <div class="search-icon">🔍</div>
     </nav>
 
 
@@ -72,9 +72,19 @@
     </div>
 
     <!-- Services Section -->
+    <section>
+        <div class="filter-buttons">
+            <button data-filter="all" onclick="filterServices('all')" class="active">All</button>
+            <button data-filter="sme" onclick="filterServices('sme')">SMEs</button>
+            <button data-filter="enterprise" onclick="filterServices('enterprise')">Enterprise</button>
+        </div>
+
+
+    </section>
+
     <section class="services">
-        <!-- Service Card 1 -->
-        <div class="service-card">
+        <!-- SME -->
+        <div class="service-card" data-type="sme">
             <div class="service-icon">
                 <img src="images/bulk_sms.png" alt="Bulk Sms">
             </div>
@@ -85,8 +95,8 @@
             </div>
         </div>
 
-        <!-- Service Card 2 -->
-        <div class="service-card">
+        <!-- Enterprise -->
+        <div class="service-card" data-type="enterprise">
             <div class="service-icon datacenter">
                 <img src="images/data-center.png" alt="Data Center">
             </div>
@@ -97,8 +107,8 @@
             </div>
         </div>
 
-        <!-- Service Card 3 -->
-        <div class="service-card">
+        <!-- Enterprise -->
+        <div class="service-card" data-type="enterprise">
             <div class="service-icon continuity">
                 <img src="images/business.png" alt="Business Continuity">
             </div>
@@ -109,8 +119,8 @@
             </div>
         </div>
 
-        <!-- Service Card 4 -->
-        <div class="service-card">
+        <!-- SME -->
+        <div class="service-card" data-type="sme">
             <div class="service-icon fleet">
                 <img src="images/gps.png" alt="Fleet Management">
             </div>
@@ -120,7 +130,35 @@
                 <button class="view-more-btn">View more</button>
             </div>
         </div>
+
+        <!-- Enterprise -->
+        <div class="service-card" data-type="enterprise">
+            <div class="service-icon continuity">
+                <img src="images/business.png" alt="Connectivity Solution">
+            </div>
+            <div class="service-content">
+                <h2>Connectivity Solution</h2>
+                <p>Customize your Private connection<br>keep away intruders</p>
+                <button class="view-more-btn">View more</button>
+            </div>
+        </div>
+
+        <!-- SME -->
+        <div class="service-card" data-type="sme">
+            <div class="service-icon fleet">
+                <img src="images/phone-ringing.png" alt="The Hive">
+            </div>
+            <div class="service-content">
+                <h2>The Hive</h2>
+                <p>Stay Connected<br>easy communication</p>
+                <button class="view-more-btn">View more</button>
+            </div>
+        </div>
     </section>
+
+ 
+
+
 
     <!-- Chat Support Button -->
     <div class="chat-support">
@@ -175,7 +213,26 @@
         });
 
     </script>
+   <script>
+        function filterServices(type) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.filter-buttons button');
 
+            // Update cards
+            cards.forEach(card => {
+                const cardType = card.getAttribute('data-type');
+                if (type === 'all' || cardType === type) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Update button styling
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.filter-buttons button[data-filter="${type}"]`)?.classList.add('active');
+        }
+    </script>
 
 </body>
 
