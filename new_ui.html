@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Batelco Business Services</title>
-        <link rel="stylesheet" href="/styles.css">
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batelco Business Services</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
 <body>
     <!-- Top Navigation -->
     <nav class="top-nav">
@@ -34,14 +35,25 @@
                 <div id="productDropdown" class="dropdown hidden">
                     <ul id="families" class="dropdown-families"></ul>
                     <div id="subItems" class="dropdown-subitems"></div>
+
+            <!-- Products -->
+            <div class="dropdown-container" id="products-container">
+                <a href="#" class="tab" data-target="products">Products</a>
+                <div class="dropdown hidden" id="dropdown-products">
+                    <ul class="dropdown-families" id="families-products"></ul>
+                    <div class="dropdown-subitems" id="subitems-products"></div>
                 </div>
             </div>
+
+
             <a href="#">Latest Offers</a>
             <a href="business_onboarding.html">Business Onboarding</a>
             <a href="#">Business Support</a>
         </div>
         <div class="search-icon">🔍</div>
     </nav>
+
+
 
 
     <!-- Banner -->
@@ -112,16 +124,11 @@
 
     <!-- Chat Support Button -->
     <div class="chat-support">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMSAxMmMwIDUtNCA5LTkgOXMtOS00LTktOWEyIDIgMCAwIDEgMi0yaDVhOSA5IDAgMCAwIDkgOWgyYTIgMiAwIDAgMCAyLTJ6Ij48L3BhdGg+PC9zdmc+" alt="Chat" width="30">
+        <img src="img/basma.png" alt="">
     </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        const productsTab = document.getElementById('productsTab');
-        const productDropdown = document.getElementById('productDropdown');
-        const familiesList = document.getElementById('families');
-        const subItemsList = document.getElementById('subItems');
-
         const families = [
             { title: "Security", icon: "shield-check", subItems: [{ name: "Managed Firewall" }] },
             { title: "Smart Solutions", icon: "sparkles", subItems: [{ name: "Managed Wifi" }, { name: "Interactive Smart Board" }, { name: "Digital Screen" }, { name: "ELV" }, { name: "Home Automation" }, { name: "Fleet Management" }] },
@@ -132,25 +139,44 @@
             { title: "Mobile", icon: "smartphone", subItems: [{ name: "Business Postpaid" }, { name: "Business Broadband" }, { name: "Business M2M" }] }
         ];
 
-        productsTab.addEventListener('mouseenter', () => productDropdown.classList.remove('hidden'));
-        productDropdown.addEventListener('mouseleave', () => productDropdown.classList.add('hidden'));
+        document.querySelectorAll('.tab').forEach(tab => {
+            const target = tab.dataset.target;
 
-        function renderFamilies() {
-            familiesList.innerHTML = families.map((fam, idx) => `
-                <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
-                    <i data-lucide="${fam.icon}"></i> ${fam.title}
-                </li>
-            `).join('');
-            lucide.createIcons();
-        }
+            const container = document.getElementById(`${target}-container`);
+            const dropdown = document.getElementById(`dropdown-${target}`);
+            const familiesList = document.getElementById(`families-${target}`);
+            const subItemsList = document.getElementById(`subitems-${target}`);
 
-        function renderSubItems(idx) {
-            subItemsList.innerHTML = families[idx].subItems.map(sub => `
+            container.addEventListener('mouseenter', () => {
+                dropdown.classList.remove('hidden');
+            });
+
+            container.addEventListener('mouseleave', () => {
+                dropdown.classList.add('hidden');
+                subItemsList.innerHTML = '';
+            });
+
+            // Render families
+            familiesList.innerHTML = '';
+            families.forEach((fam, idx) => {
+                const li = document.createElement('li');
+                li.className = 'dropdown-item';
+                li.innerHTML = `<i data-lucide="${fam.icon}"></i> ${fam.title}`;
+                li.addEventListener('mouseenter', () => {
+                    subItemsList.innerHTML = fam.subItems.map(sub => `
                 <div class="subitem">${sub.name}</div>
             `).join('');
-        }
+                });
+                familiesList.appendChild(li);
+            });
 
-        renderFamilies();
+            // Re-render icons
+            lucide.createIcons();
+        });
+
     </script>
+
+
 </body>
+
 </html>
