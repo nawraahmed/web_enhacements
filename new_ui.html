@@ -40,7 +40,7 @@
         <a href="business_onboarding.html">Business Onboarding</a>
         <a href="#">Business Support</a>
       </div>
-      <div class="search-icon">🔍</div>
+      <div class="search-icon" id="searchIcon">🔍</div>
     </nav>
 
     <!-- Banner -->
@@ -156,6 +156,11 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+      document
+        .getElementById('searchIcon')
+        .addEventListener('click', function () {
+          window.location.href = 'search.html'
+        })
       const families = [
         {
           title: 'Security',

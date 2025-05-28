@@ -44,7 +44,7 @@
         <a href="business_onboarding.html">Business Onboarding</a>
         <a href="#">Business Support</a>
       </div>
-      <div class="search-icon">🔍</div>
+      <div class="search-icon" id="searchIcon">🔍</div>
     </nav>
 
     <!-- Main Content -->
@@ -65,6 +65,12 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+      document
+        .getElementById('searchIcon')
+        .addEventListener('click', function () {
+          window.location.href = 'search.html'
+        })
+
       const productsTab = document.getElementById('productsTab')
       const productDropdown = document.getElementById('productDropdown')
       const familiesList = document.getElementById('families')

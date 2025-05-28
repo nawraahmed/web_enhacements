@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batelco Business Services</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-links">
+        <a href="#">Personal</a>
+        <a href="#" class="active">Business</a>
+        <a href="#">Global</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="top-nav-utility">
+        <a href="#">Support</a>
+        <a href="#">My Account</a>
+        <a href="#">Quick pay</a>
+      </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="logo">
+        <img src="images/batelco_logo.png" alt="Batelco Logo" />
+      </div>
+      <div class="main-nav-links">
+        <div class="dropdown-container">
+          <a href="new_ui.html" id="productsTab">Products</a>
+          <div id="productDropdown" class="dropdown hidden">
+            <ul id="families" class="dropdown-families"></ul>
+            <div id="subItems" class="dropdown-subitems"></div>
+          </div>
+        </div>
+        <a href="#">Latest Offers</a>
+        <a href="business_onboarding.html">Business Onboarding</a>
+        <a href="#">Business Support</a>
+      </div>
+      <div class="search-icon" id="searchIcon">🔍</div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <h1 class="page-title">Search</h1>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="What are you looking for?"
+          id="searchInput"
+        />
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Results</button>
+        <button class="filter-btn" data-filter="articles">Articles</button>
+        <button class="filter-btn" data-filter="products">Products</button>
+      </div>
+
+      <!-- Search Results -->
+      <div class="search-results" id="searchResults">
+        <!-- Article Results -->
+        <div class="result-item" data-type="articles">
+          <span class="result-type">Article</span>
+          <h2 class="result-title">Understanding Modern Web Development</h2>
+          <p class="result-description">
+            A comprehensive guide to modern web development practices, covering
+            the latest frameworks, tools, and methodologies used by professional
+            developers today.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Published: March 15, 2024</span>
+            <span class="result-category">Technology</span>
+          </div>
+        </div>
+
+        <div class="result-item" data-type="products">
+          <span class="result-type">Product</span>
+          <h2 class="result-title">Premium Web Development Course</h2>
+          <p class="result-description">
+            Master the art of web development with our comprehensive course.
+            Learn HTML, CSS, JavaScript, and modern frameworks from industry
+            experts.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Updated: May 20, 2024</span>
+            <span class="result-category">Education</span>
+          </div>
+        </div>
+
+        <div class="result-item" data-type="articles">
+          <span class="result-type">Article</span>
+          <h2 class="result-title">CSS Grid vs Flexbox: When to Use Which</h2>
+          <p class="result-description">
+            An in-depth comparison of CSS Grid and Flexbox, exploring their
+            strengths, weaknesses, and ideal use cases for modern web layouts.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Published: April 8, 2024</span>
+            <span class="result-category">Design</span>
+          </div>
+        </div>
+
+        <div class="result-item" data-type="products">
+          <span class="result-type">Product</span>
+          <h2 class="result-title">Professional Design System Kit</h2>
+          <p class="result-description">
+            A complete design system with components, patterns, and guidelines
+            to help you build consistent and beautiful user interfaces.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Updated: May 1, 2024</span>
+            <span class="result-category">Design Tools</span>
+          </div>
+        </div>
+
+        <div class="result-item" data-type="articles">
+          <span class="result-type">Article</span>
+          <h2 class="result-title">JavaScript Performance Optimization Tips</h2>
+          <p class="result-description">
+            Learn essential techniques to optimize your JavaScript code for
+            better performance, including memory management, async operations,
+            and efficient DOM manipulation.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Published: May 12, 2024</span>
+            <span class="result-category">Programming</span>
+          </div>
+        </div>
+
+        <div class="result-item" data-type="products">
+          <span class="result-type">Product</span>
+          <h2 class="result-title">React Component Library</h2>
+          <p class="result-description">
+            A collection of reusable React components built with modern best
+            practices. Includes documentation, examples, and TypeScript support.
+          </p>
+          <div class="result-meta">
+            <span class="result-date">Updated: April 25, 2024</span>
+            <span class="result-category">Development</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results hidden" id="noResults">
+        <p>No results found. Try adjusting your search terms or filters.</p>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById('searchIcon')
+        .addEventListener('click', function () {
+          window.location.href = 'search.html'
+        })
+
+      // Filter functionality
+      const filterBtns = document.querySelectorAll('.filter-btn')
+      const resultItems = document.querySelectorAll('.result-item')
+      const noResults = document.getElementById('noResults')
+      const searchInput = document.getElementById('searchInput')
+
+      // Filter button click handler
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach((b) => b.classList.remove('active'))
+          // Add active class to clicked button
+          btn.classList.add('active')
+
+          const filter = btn.getAttribute('data-filter')
+          filterResults(filter)
+        })
+      })
+
+      // Filter results function
+      function filterResults(filter) {
+        let visibleCount = 0
+
+        resultItems.forEach((item) => {
+          const itemType = item.getAttribute('data-type')
+
+          if (filter === 'all' || itemType === filter) {
+            item.classList.remove('hidden')
+            visibleCount++
+          } else {
+            item.classList.add('hidden')
+          }
+        })
+
+        // Show/hide no results message
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden')
+        } else {
+          noResults.classList.add('hidden')
+        }
+      }
+
+      // Search functionality
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase()
+        let visibleCount = 0
+
+        resultItems.forEach((item) => {
+          const title = item
+            .querySelector('.result-title')
+            .textContent.toLowerCase()
+          const description = item
+            .querySelector('.result-description')
+            .textContent.toLowerCase()
+          const category = item
+            .querySelector('.result-category')
+            .textContent.toLowerCase()
+
+          if (
+            title.includes(searchTerm) ||
+            description.includes(searchTerm) ||
+            category.includes(searchTerm)
+          ) {
+            item.classList.remove('hidden')
+            visibleCount++
+          } else {
+            item.classList.add('hidden')
+          }
+        })
+
+        // Show/hide no results message
+        if (visibleCount === 0 && searchTerm !== '') {
+          noResults.classList.remove('hidden')
+        } else {
+          noResults.classList.add('hidden')
+        }
+
+        // Reset filter buttons when searching
+        if (searchTerm !== '') {
+          filterBtns.forEach((btn) => btn.classList.remove('active'))
+          filterBtns[0].classList.add('active') // Activate "All Results"
+        }
+      })
+
+      // Add hover effects to result titles
+      document.querySelectorAll('.result-title').forEach((title) => {
+        title.addEventListener('click', () => {
+          // You can add navigation logic here
+          console.log('Navigate to:', title.textContent)
+        })
+      })
+    </script>
+  </body>
+</html>
