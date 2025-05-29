@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batelco Business Services</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-links">
+        <a href="#">Personal</a>
+        <a href="#" class="active">Business</a>
+        <a href="#">Global</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="top-nav-utility">
+        <a href="#">Support</a>
+        <a href="#">My Account</a>
+        <a href="#">Quick pay</a>
+      </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="logo">
+        <img src="images/batelco_logo.png" alt="Batelco Logo" />
+      </div>
+      <div class="main-nav-links">
+        <div class="dropdown-container">
+          <a href="new_ui.html" id="productsTab">Products</a>
+          <div id="productDropdown" class="dropdown hidden">
+            <ul id="families" class="dropdown-families"></ul>
+            <div id="subItems" class="dropdown-subitems"></div>
+          </div>
+        </div>
+        <a href="#">Latest Offers</a>
+        <a href="business_onboarding.html">Business Onboarding</a>
+        <a href="#">Business Support</a>
+      </div>
+      <div class="search-icon" id="searchIcon">🔍</div>
+    </nav>
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">ELV Smart Solutions</h1>
+          <p class="hero-subtitle">
+            Power your property with smart, low-voltage systems
+          </p>
+          <p class="hero-description">
+            Seamless security, connectivity, and control for modern living and
+            business efficiency
+          </p>
+        </div>
+      </section>
+
+      <!-- Tab Navigation -->
+      <div class="tab-navigation">
+        <button class="tab-btn active" data-tab="description">
+          Description
+        </button>
+        <button class="tab-btn" data-tab="use-cases">Use Cases</button>
+        <button class="tab-btn" data-tab="success-stories">
+          Success Stories
+        </button>
+        <button class="tab-btn" data-tab="faqs">FAQs</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Description Tab -->
+        <div class="tab-pane active" id="description">
+          <div class="content-section">
+            <h2>What are ELV Solutions?</h2>
+            <p>
+              ELV (Extra Low Voltage) Solutions refer to a range of electrical
+              systems and technologies that operate on low voltage levels,
+              typically 50V to 1000V, and are designed to provide support for
+              communication, control, and automation systems in both residential
+              and commercial environments.
+            </p>
+            <p>
+              ELV systems are essential for modern buildings, providing key
+              functionalities like security, automation, communication, and
+              energy management without the need for high-voltage electrical
+              systems. These solutions ensure safety, efficiency, and seamless
+              integration with your existing infrastructure.
+            </p>
+            <p>
+              Our smart ELV solutions are designed to transform your property
+              into an intelligent, connected environment that adapts to your
+              needs while maintaining the highest standards of security and
+              reliability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Use Cases Tab -->
+        <div class="tab-pane" id="use-cases">
+          <div class="content-section">
+            <h2>Where ELV Solutions Make a Difference</h2>
+            <p>
+              Our ELV solutions are versatile and can be implemented across
+              various sectors to enhance security, communication, and
+              operational efficiency.
+            </p>
+            <div class="use-cases-grid">
+              <div class="use-case-card">
+                <h3>🏥 Healthcare Facilities</h3>
+                <p>
+                  Critical patient monitoring systems, nurse call systems,
+                  access control, and communication networks that ensure patient
+                  safety and operational efficiency in hospitals and clinics.
+                </p>
+              </div>
+              <div class="use-case-card">
+                <h3>🎓 Educational Institutions</h3>
+                <p>
+                  Campus-wide security systems, classroom automation, digital
+                  signage, and communication networks that create safe and
+                  modern learning environments.
+                </p>
+              </div>
+              <div class="use-case-card">
+                <h3>🏢 Corporate Offices</h3>
+                <p>
+                  Advanced security systems, building automation, conference
+                  room technology, and integrated communication solutions for
+                  enhanced productivity and security.
+                </p>
+              </div>
+              <div class="use-case-card">
+                <h3>🏨 Hotels & Hospitality</h3>
+                <p>
+                  Guest room automation, security systems, entertainment
+                  solutions, and energy management systems that enhance guest
+                  experience and operational efficiency.
+                </p>
+              </div>
+              <div class="use-case-card">
+                <h3>🏗️ Multistory Buildings</h3>
+                <p>
+                  Comprehensive building management systems, fire safety
+                  solutions, access control, and communication networks for
+                  residential and commercial high-rises.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Stories Tab -->
+        <div class="tab-pane success-story" id="success-stories">
+          <div class="story-layout">
+            <!-- Image Carousel (left side) -->
+            <div class="success-images">
+              <div class="image-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      alt="Modern office building with ELV systems"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      alt="Hospital with advanced medical technology"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      alt="Security control room"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                      alt="Modern office interior"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-indicators">
+                  <span class="indicator active"></span>
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text content (right side) -->
+            <div class="story-text">
+              <h3>Golden Gate Project by Garnata Real Estate Group</h3>
+              <p>
+                Implemented comprehensive ELV solutions including advanced
+                security systems, building automation, and communication
+                networks across 40 floors. The integration resulted in 35%
+                reduction in energy costs and enhanced security protocols.
+              </p>
+              <div class="client">— Facilities Manager, Golden Gate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQs Tab -->
+        <div class="tab-pane" id="faqs">
+          <div class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              Get answers to common questions about our ELV solutions and
+              services.
+            </p>
+
+            <div class="faq-item">
+              <div class="faq-question">What is Batelco ELV Solution?</div>
+              <div class="faq-answer">
+                <p>
+                  Batelco ELV Solution refers to integrated systems that use
+                  low-voltage technology for various applications, including
+                  security, automation, and communication systems in
+                  residential, commercial, and industrial environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">What does ELV stand for?</div>
+              <div class="faq-answer">
+                <p>
+                  ELV stands for "Extra Low Voltage," encompassing systems that
+                  operate on low voltage, typically below 50 volts AC or 120
+                  volts DC.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Who can benefit from Batelco ELV Solutions?
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Businesses, property developers, educational institutions,
+                  healthcare facilities, and residential communities can all
+                  benefit from Batelco’s ELV Solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What are the main components of Batelco ELV Solutions?
+              </div>
+              <div class="faq-answer">
+                <p>
+                  CCTV Surveillance Systems, Access Control Systems, Public
+                  Address (PA) Systems, Fire Alarm Systems, Home Automation,
+                  Structured Cabling, Audio-Visual Systems, Smart Parking,
+                  SMATV, Guest Room Management System, Smart Meters, Digital
+                  Screens, Distributed Antenna System, Intelligent Building
+                  Management Systems (iBMS).
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Are Batelco ELV Solutions customizable?
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, Batelco ELV Solutions are fully customizable to meet
+                  specific requirements for various projects or industries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn')
+      const tabPanes = document.querySelectorAll('.tab-pane')
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and panes
+          tabBtns.forEach((b) => b.classList.remove('active'))
+          tabPanes.forEach((p) => p.classList.remove('active'))
+
+          // Add active class to clicked button
+          btn.classList.add('active')
+
+          // Show corresponding tab pane
+          const tabId = btn.getAttribute('data-tab')
+          document.getElementById(tabId).classList.add('active')
+        })
+      })
+
+      // FAQ functionality
+      const faqItems = document.querySelectorAll('.faq-item')
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector('.faq-question')
+
+        question.addEventListener('click', () => {
+          // Toggle active class
+          item.classList.toggle('active')
+
+          // Close other FAQ items (optional - remove if you want multiple open)
+          faqItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active')
+            }
+          })
+        })
+      })
+
+      // Search icon navigation
+      document
+        .getElementById('searchIcon')
+        .addEventListener('click', function () {
+          window.location.href = 'search.html'
+        })
+
+      function initializeCarousel() {
+        const slides = document.querySelectorAll('.carousel-slide')
+        const indicators = document.querySelectorAll('.indicator')
+
+        if (slides.length === 0 || indicators.length === 0) return
+
+        let currentSlide = 0
+        let carouselInterval
+
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove('active'))
+          indicators.forEach((indicator) =>
+            indicator.classList.remove('active')
+          )
+
+          slides[index].classList.add('active')
+          indicators[index].classList.add('active')
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length
+          showSlide(currentSlide)
+        }
+
+        function startCarousel() {
+          stopCarousel()
+          carouselInterval = setInterval(nextSlide, 3000)
+        }
+
+        function stopCarousel() {
+          clearInterval(carouselInterval)
+        }
+
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => {
+            currentSlide = index
+            showSlide(currentSlide)
+            startCarousel()
+          })
+        })
+
+        const carousel = document.querySelector('.image-carousel')
+        if (carousel) {
+          carousel.addEventListener('mouseenter', stopCarousel)
+          carousel.addEventListener('mouseleave', startCarousel)
+        }
+
+        showSlide(currentSlide) // Show the first slide immediately
+        startCarousel()
+      }
+
+      initializeCarousel()
+    </script>
+  </body>
+</html>
