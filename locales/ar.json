@@ -1,0 +1,39 @@
+{
+  "page_title": "خدمات بتلكو للأعمال",
+
+  "personal": "شخصي",
+  "business": "الأعمال",
+  "global": "عالمي",
+  "about": "معلومات عنا",
+  "support": "الدعم",
+  "account": "حسابي",
+  "quickpay": "دفع سريع",
+  "products": "المنتجات",
+  "latest_offers": "أحدث العروض",
+  "onboarding": "الالتحاق بالأعمال",
+  "business_support": "دعم الأعمال",
+
+  "filter_all": "الكل",
+  "filter_sme": "الشركات الصغيرة",
+  "filter_enterprise": "الشركات الكبيرة",
+
+  "bulk_sms_title": "الرسائل الجماعية",
+  "bulk_sms_desc": "منصة رسائل جماعية سريعة، موثوقة، وقابلة للتوسع",
+
+  "datacenter_title": "استضافة مركز البيانات",
+  "datacenter_desc": "مصمم للجهوزية، جاهز لأي شيء",
+
+  "continuity_title": "استمرارية الأعمال",
+  "continuity_desc": "استمر في التشغيل — مهما كانت الظروف",
+
+  "fleet_title": "إدارة الأسطول",
+  "fleet_desc": "تحكم كامل في كل مركبة وكل ميل",
+
+  "connectivity_title": "حلول الاتصال",
+  "connectivity_desc": "خصص اتصالك الخاص وابقِ المتطفلين بعيداً",
+
+  "hive_title": "ذا هايف",
+  "hive_desc": "ابقَ على اتصال واتصل بسهولة",
+
+  "view_more": "عرض المزيد"
+}

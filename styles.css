@@ -69,6 +69,17 @@ body {
   transform: translateY(-1px);
 }
 
+/* RTL support */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
 /* Main navigation */
 .main-nav {
   display: flex;
