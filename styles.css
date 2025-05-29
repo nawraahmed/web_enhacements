@@ -1399,19 +1399,26 @@ main.text-center {
   transform: scale(1.2);
 }
 
-/* Responsive Design */
+.success-story .story-layout {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.success-story .success-images {
+  flex: 0 0 300px;
+}
+
+.success-story .story-text {
+  flex: 1;
+}
+
 @media (max-width: 768px) {
-  .success-content {
+  .success-story .story-layout {
     flex-direction: column;
-    gap: 20px;
   }
 
-  .success-images {
-    flex: none;
-    min-width: unset;
-  }
-
-  .carousel-track {
-    height: 200px;
+  .success-story .success-images {
+    width: 100%;
   }
 }
