@@ -48,13 +48,62 @@
   </nav>
 
   <!-- Banner -->
-  <div class="banner">
-    <div class="banner-image"></div>
-    <div class="banner-image"></div>
-    <div class="banner-image"></div>
-    <div class="banner-image"></div>
-    <div class="banner-image"></div>
+  <div class="banner-slider">
+    <div class="slide"
+      style="background-image: url('https://i.batelco.com/media/catalog/product/2/0/2025.05.05_eid_al_adha_banner_eshop_2560x853_eng.jpg');">
+    </div>
+    <div class="slide active"
+      style="background-image: url('https://i.batelco.com/media/catalog/product/a/p/app_banners-01_3.png');"></div>
+    <div class="slide"
+      style="background-image: url('https://i.batelco.com/media/catalog/product/n/e/new_fiber_speeds_banner_eshop_app_2560x853_eng_1_.png');">
+    </div>
+
+    <!--
+<div class="banner-content">
+  <h1>Welcome to Batelco Business</h1>
+  <p>Telecom & Smart Solutions for Your Business</p>
+  <a href="product_details.html" class="banner-button">Explore Products</a>
+</div>
+-->
+
+
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
   </div>
+
+  <section class="sister-companies-section">
+    <p class="description-top" data-i18n="sister_top">Batelco, part of Beyon group</p>
+
+    <div class="sister-companies">
+      <a href="https://www.beyonsolutions.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/09/22143037/Group-Logo-lockup-06.svg" alt="Beyon">
+      </a>
+      <a href="https://www.beyonmoney.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/09/22143022/Group-Logo-lockup-02.svg"
+          alt="Beyon Connect">
+      </a>
+      <a href="https://beyon.com/beyon-cyber/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/09/22143027/Group-Logo-lockup-04.svg"
+          alt="Beyon Cyber">
+      </a>
+      <a href="https://www.beyonconnect.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/09/22143032/Group-Logo-lockup-05.svg"
+          alt="Infonas">
+      </a>
+      <a href="https://www.beyonmoney.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/10/23130259/Group-Logo-lockup-03.svg"
+          alt="Beyon Money">
+      </a>
+    </div>
+
+
+    <p class="description-bottom" data-i18n="sister_bottom">Flexible Solutions from Start-ups to Large Enterprises</p>
+  </section>
+
+  </section>
 
   <!-- Filter Buttons -->
   <section>
@@ -66,370 +115,347 @@
     </div>
   </section>
 
-    <section class="services">
-      <!-- SME -->
-      <div class="service-card" data-type="sme">
-        <div class="service-icon">
-          <img src="images/bulk_sms.png" alt="Bulk Sms" />
-        </div>
-        <div class="service-content">
-          <h2>Bulk SMS</h2>
-          <p>Fast, Reliable & Scalable<br />Bulk Messaging Platform</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+  <section class="services">
+    <!-- SME -->
+    <div class="service-card" data-type="sme">
+      <div class="service-icon">
+        <img src="images/bulk_sms.png" alt="Bulk Sms" />
       </div>
-
-      <!-- Enterprise -->
-      <div class="service-card" data-type="enterprise">
-        <div class="service-icon datacenter">
-          <img src="images/data-center.png" alt="Data Center" />
-        </div>
-        <div class="service-content">
-          <h2>Datacenter Colocation</h2>
-          <p>Built for uptime, Ready for<br />anything</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+      <div class="service-content">
+        <h2 data-i18n="bulk_sms_title">Bulk SMS</h2>
+        <p data-i18n="bulk_sms_desc">Fast, Reliable & Scalable<br />Bulk Messaging Platform</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
       </div>
+    </div>
 
-      <!-- Enterprise -->
-      <div class="service-card" data-type="enterprise">
-        <div class="service-icon continuity">
-          <img src="images/business.png" alt="Business Continuity" />
-        </div>
-        <div class="service-content">
-          <h2>Business Continuity</h2>
-          <p>Keep operations running—<br />no matter what</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+    <!-- Datacenter -->
+    <div class="service-card" data-type="enterprise">
+      <div class="service-icon datacenter">
+        <img src="images/data-center.png" alt="Data Center" />
       </div>
-
-      <div class="service-card" data-type="enterprise">
-        <div class="service-icon continuity">
-          <img src="images/automation.png" alt="ELV" />
-        </div>
-        <div class="service-content">
-          <h2>ELV</h2>
-          <p>
-            Power your property with smart, low-voltage systems—seamless
-            security, connectivity, and control for modern living and business
-            efficiency
-          </p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+      <div class="service-content">
+        <h2 data-i18n="datacenter_title">Datacenter Colocation</h2>
+        <p data-i18n="datacenter_desc">Built for uptime, Ready for<br />anything</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
       </div>
+    </div>
 
-      <!-- SME -->
-      <div class="service-card" data-type="sme">
-        <div class="service-icon fleet">
-          <img src="images/gps.png" alt="Fleet Management" />
-        </div>
-        <div class="service-content">
-          <h2>Fleet Management</h2>
-          <p>Stay in control of every<br />vehicle, every mile</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+    <!-- Business Continuity -->
+    <div class="service-card" data-type="enterprise">
+      <div class="service-icon continuity">
+        <img src="images/business.png" alt="Business Continuity" />
       </div>
-
-      <!-- Enterprise -->
-      <div class="service-card" data-type="enterprise">
-        <div class="service-icon continuity">
-          <img src="images/business.png" alt="Connectivity Solution" />
-        </div>
-        <div class="service-content">
-          <h2>Connectivity Solution</h2>
-          <p>Customize your Private connection<br />keep away intruders</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+      <div class="service-content">
+        <h2 data-i18n="continuity_title">Business Continuity</h2>
+        <p data-i18n="continuity_desc">Keep operations running—<br />no matter what</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
       </div>
+    </div>
 
-      <!-- SME -->
-      <div class="service-card" data-type="sme">
-        <div class="service-icon fleet">
-          <img src="images/phone-ringing.png" alt="The Hive" />
-        </div>
-        <div class="service-content">
-          <h2>The Hive</h2>
-          <p>Stay Connected<br />easy communication</p>
-          <button
-            class="view-more-btn"
-            onclick="window.location.href='product_details.html'"
-          >
-            View more
-          </button>
-        </div>
+    <!-- ELV -->
+    <div class="service-card" data-type="enterprise">
+      <div class="service-icon continuity">
+        <img src="images/automation.png" alt="ELV" />
       </div>
-    </section>
+      <div class="service-content">
+        <h2 data-i18n="elv_title">ELV</h2>
+        <p data-i18n="elv_desc">
+          Power your property with smart, low-voltage systems—seamless
+          security, connectivity, and control for modern living and business
+          efficiency
+        </p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
+      </div>
+    </div>
 
-<!-- Chat Support Button -->
-<div class="chat-support">
-  <img src="images/basma.png" alt="basma logo" />
-</div>
+    <!-- Fleet Management -->
+    <div class="service-card" data-type="sme">
+      <div class="service-icon fleet">
+        <img src="images/gps.png" alt="Fleet Management" />
+      </div>
+      <div class="service-content">
+        <h2 data-i18n="fleet_title">Fleet Management</h2>
+        <p data-i18n="fleet_desc">Stay in control of every<br />vehicle, every mile</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
+      </div>
+    </div>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  document
-    .getElementById('searchIcon')
-    .addEventListener('click', function () {
-      window.location.href = 'search.html'
-    })
-  const families = [
-    {
-      title: 'Security',
-      icon: 'shield-check',
-      subItems: [{ name: 'Managed Firewall' }]
-    },
-    {
-      title: 'Smart Solutions',
-      icon: 'sparkles',
-      subItems: [
-        { name: 'Managed Wifi' },
-        { name: 'Interactive Smart Board' },
-        { name: 'Digital Screen' },
-        { name: 'ELV' },
-        { name: 'Home Automation' },
-        { name: 'Fleet Management' }
-      ]
-    },
-    {
-      title: 'Messaging',
-      icon: 'message-circle',
-      subItems: [{ name: 'Telegram' }, { name: 'Bulk SMS' }]
-    },
-    {
-      title: 'Hosting',
-      icon: 'database',
-      subItems: [
-        { name: 'Email' },
-        { name: 'Datacenter Colocation' },
-        { name: 'Business Continuity' }
-      ]
-    },
-    {
-      title: 'Connectivity & Internet',
-      icon: 'wifi',
-      subItems: [
-        { name: 'Fiber Broadband' },
-        { name: 'IPVPN/MPLS' },
-        { name: 'SD-WAN' }
-      ]
-    },
-    {
-      title: 'Voice Communication',
-      icon: 'phone',
-      subItems: [
-        { name: 'Unified Communication' },
-        { name: 'Cloud UC' },
-        { name: 'Fixed Voice' },
-        { name: 'ISDN, PSTN, SIP' }
-      ]
-    },
-    {
-      title: 'Mobile',
-      icon: 'smartphone',
-      subItems: [
-        { name: 'Business Postpaid' },
-        { name: 'Business Broadband' },
-        { name: 'Business M2M' }
-      ]
-    }
-  ]
+    <!-- Connectivity -->
+    <div class="service-card" data-type="enterprise">
+      <div class="service-icon continuity">
+        <img src="images/business.png" alt="Connectivity Solution" />
+      </div>
+      <div class="service-content">
+        <h2 data-i18n="connectivity_title">Connectivity Solution</h2>
+        <p data-i18n="connectivity_desc">Customize your Private connection<br />keep away intruders</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
+      </div>
+    </div>
 
-  const productsTab = document.getElementById('productsTab')
-  const productDropdown = document.getElementById('productDropdown')
-  const familiesList = document.getElementById('families')
-  const subItemsList = document.getElementById('subItems')
+    <!-- The Hive -->
+    <div class="service-card" data-type="sme">
+      <div class="service-icon fleet">
+        <img src="images/phone-ringing.png" alt="The Hive" />
+      </div>
+      <div class="service-content">
+        <h2 data-i18n="hive_title">The Hive</h2>
+        <p data-i18n="hive_desc">Stay Connected<br />easy communication</p>
+        <button class="view-more-btn" data-i18n="view_more">View more</button>
+      </div>
+    </div>
+  </section>
 
-  // Dropdown functionality
-  productsTab.addEventListener('mouseenter', () => {
-    productDropdown.classList.remove('hidden')
-  })
+  <section class="sister-companies-section">
+    <p class="description-bottom" data-i18n="Trusted-Companies">Trusted by the world’s best companies</p>
 
-  productDropdown.addEventListener('mouseleave', () => {
-    productDropdown.classList.add('hidden')
-  })
+    <div class="sister-companies">
+      <a href="https://www.huawei.com/en/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095105/Partners-Logo-3-03.svg" alt="Beyon">
+      </a>
+      <a href="https://www.fortinet.com/support/product-downloads" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095110/Partners-Logo-3-04.svg"
+          alt="Beyon Connect">
+      </a>
+      <a href="https://www.nokia.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095132/Partners-Logo-3-09.svg"
+          alt="Beyon Cyber">
+      </a>
+      <a href="https://www.ericsson.com/en" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095059/Partners-Logo-3-02.svg"
+          alt="Infonas">
+      </a>
+      <a href="https://www.office.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095140/Partners-Logo-3-11.svg"
+          alt="Beyon Money">
+      </a>
+       <a href="https://corporatestack.com/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095137/Partners-Logo-3-10.webp"
+          alt="Beyon Money">
+      </a>
+       <a href="https://www.4-square.net/projects/fine-dining-qsr/" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095115/Partners-Logo-3-05.webp"
+          alt="Beyon Money">
+      </a>
+       <a href="https://www.thalesgroup.com/en" target="_blank" rel="noopener">
+        <img src="https://content.batelco.com/wp-content/uploads/2024/11/03095151/Partners-Logo-3-13.svg"
+          alt="Beyon Money">
+    
+    </div>
+  </section>
 
-  function renderFamilies() {
-    familiesList.innerHTML = families
-      .map(
-        (fam, idx) => `
-                <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
-                    <i data-lucide="${fam.icon}"></i> ${fam.title}
-                </li>
-            `
-      )
-      .join('')
-    lucide.createIcons()
-  }
+  <!-- Chat Support Button -->
+  <div class="chat-support">
+    <img src="images/basma.png" alt="basma logo" />
+  </div>
 
-  function renderSubItems(idx) {
-    subItemsList.innerHTML = families[idx].subItems
-      .map(
-        (sub) => `
-                <div class="subitem">${sub.name}</div>
-            `
-      )
-      .join('')
-  }
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    let currentLang = 'en';
+    const originalTexts = {};
+    let translations = {};
 
-  renderFamilies()
-
-  document.querySelectorAll('.tab').forEach((tab) => {
-    const target = tab.dataset.target
-
-    const container = document.getElementById(`${target}-container`)
-    const dropdown = document.getElementById(`dropdown-${target}`)
-    const familiesList = document.getElementById(`families-${target}`)
-    const subItemsList = document.getElementById(`subitems-${target}`)
-
-    container.addEventListener('mouseenter', () => {
-      dropdown.classList.remove('hidden')
-    })
-
-    container.addEventListener('mouseleave', () => {
-      dropdown.classList.add('hidden')
-      subItemsList.innerHTML = ''
-    })
-
-    // Render families
-    familiesList.innerHTML = ''
-    families.forEach((fam, idx) => {
-      const li = document.createElement('li')
-      li.className = 'dropdown-item'
-      li.innerHTML = `<i data-lucide="${fam.icon}"></i> ${fam.title}`
-      li.addEventListener('mouseenter', () => {
-        subItemsList.innerHTML = fam.subItems
-          .map(
-            (sub) => `
-                <div class="subitem">${sub.name}</div>
-            `
-          )
-          .join('')
-      })
-      familiesList.appendChild(li)
-    })
-
-    // Re-render icons
-    lucide.createIcons()
-  })
-</script>
-<script>
-  function filterServices(type) {
-    const cards = document.querySelectorAll('.service-card')
-    const buttons = document.querySelectorAll('.filter-buttons button')
-
-    // Update cards
-    cards.forEach((card) => {
-      const cardType = card.getAttribute('data-type')
-      if (type === 'all' || cardType === type) {
-        card.classList.remove('hidden')
-      } else {
-        card.classList.add('hidden')
+    const families = [
+      {
+        key: 'security',
+        icon: 'shield-check',
+        subItems: [{ key: 'managed_firewall' }]
+      },
+      {
+        key: 'smart_solutions',
+        icon: 'sparkles',
+        subItems: [
+          { key: 'managed_wifi' },
+          { key: 'smart_board' },
+          { key: 'digital_screen' },
+          { key: 'elv' },
+          { key: 'home_automation' },
+          { key: 'fleet_management' }
+        ]
+      },
+      {
+        key: 'messaging',
+        icon: 'message-circle',
+        subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
+      },
+      {
+        key: 'hosting',
+        icon: 'database',
+        subItems: [
+          { key: 'email' },
+          { key: 'datacenter' },
+          { key: 'continuity' }
+        ]
+      },
+      {
+        key: 'connectivity',
+        icon: 'wifi',
+        subItems: [
+          { key: 'fiber_broadband' },
+          { key: 'ipvpn' },
+          { key: 'sdwan' }
+        ]
+      },
+      {
+        key: 'voice',
+        icon: 'phone',
+        subItems: [
+          { key: 'unified_comm' },
+          { key: 'cloud_uc' },
+          { key: 'fixed_voice' },
+          { key: 'isdn' }
+        ]
+      },
+      {
+        key: 'mobile',
+        icon: 'smartphone',
+        subItems: [
+          { key: 'postpaid' },
+          { key: 'broadband' },
+          { key: 'm2m' }
+        ]
       }
-    })
+    ];
 
-    // Update button styling
-    buttons.forEach((btn) => btn.classList.remove('active'))
-    document
-      .querySelector(`.filter-buttons button[data-filter="${type}"]`)
-      ?.classList.add('active')
-  }
+    const familiesList = document.getElementById('families');
+    const subItemsList = document.getElementById('subItems');
+    const productsTab = document.getElementById('productsTab');
+    const productDropdown = document.getElementById('productDropdown');
 
-
-
-  let currentLang = 'en';
-  const originalTexts = {};
-
-  // Save original (English) text content on page load
-  function cacheOriginalText() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      originalTexts[key] = el.innerHTML;
+    // 🔍 Search icon
+    document.getElementById('searchIcon')?.addEventListener('click', () => {
+      window.location.href = 'search.html';
     });
-  }
 
-  async function setLanguage(lang) {
-    if (lang === 'ar') {
-      try {
-        const response = await fetch('./locales/ar.json');
-        const translations = await response.json();
+    // 🧠 Save original English content
+    function cacheOriginalText() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        originalTexts[key] = el.innerHTML;
+      });
+    }
 
-        document.documentElement.lang = 'ar';
-        document.documentElement.dir = 'rtl';
-        document.body.style.fontFamily = "'Cairo', sans-serif";
+    // 📦 Render dropdown categories
+    function renderFamilies() {
+      familiesList.innerHTML = families
+        .map((fam, idx) => `
+        <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
+          <i data-lucide="${fam.icon}"></i> ${translations[fam.key] || fam.key}
+        </li>
+      `)
+        .join('');
+      lucide.createIcons();
+    }
+
+    // 🧩 Render subitems when hovering a category
+    function renderSubItems(idx) {
+      subItemsList.innerHTML = families[idx].subItems
+        .map(sub => `<div class="subitem">${translations[sub.key] || sub.key}</div>`)
+        .join('');
+    }
+
+    // 🌐 Language switcher
+    async function setLanguage(lang) {
+      if (lang === 'ar') {
+        try {
+          const response = await fetch('./locales/ar.json');
+          translations = await response.json();
+
+          document.documentElement.lang = 'ar';
+          document.documentElement.dir = 'rtl';
+          document.body.style.fontFamily = "'Cairo', sans-serif";
+
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const html = translations[key];
+            if (html) el.innerHTML = html;
+          });
+
+          renderFamilies();
+          document.getElementById('lang-btn').textContent = 'English';
+        } catch (err) {
+          console.error('Failed to load Arabic translations:', err);
+        }
+      } else {
+        translations = {}; // clear translations
+
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        document.body.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
-          const html = translations[key];
-          if (html) {
-            el.innerHTML = html;
+          if (originalTexts[key]) {
+            el.innerHTML = originalTexts[key];
           }
         });
 
-        document.getElementById('lang-btn').textContent = 'English';
-      } catch (err) {
-        console.error('Failed to load Arabic translations:', err);
+        renderFamilies();
+        document.getElementById('lang-btn').textContent = 'عربي';
       }
-    } else {
-      // Restore original English from cache
-      document.documentElement.lang = 'en';
-      document.documentElement.dir = 'ltr';
-      document.body.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
 
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (originalTexts[key]) {
-          el.innerHTML = originalTexts[key];
-        }
-      });
-
-      document.getElementById('lang-btn').textContent = 'عربي';
+      currentLang = lang;
     }
 
-    currentLang = lang;
-  }
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      setLanguage(newLang);
+    }
 
-  function toggleLanguage() {
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
-  }
+    // 🧼 Filter Services (unchanged)
+    function filterServices(type) {
+      const cards = document.querySelectorAll('.service-card');
+      const buttons = document.querySelectorAll('.filter-buttons button');
 
-  window.addEventListener('DOMContentLoaded', () => {
-    cacheOriginalText();     // save English text from HTML
-    setLanguage(currentLang); // load default language (en)
-  });
+      cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        card.classList.toggle('hidden', type !== 'all' && cardType !== type);
+      });
 
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.filter-buttons button[data-filter="${type}"]`)?.classList.add('active');
+    }
 
-</script>
+    // 🎬 Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      cacheOriginalText();
+      setLanguage(currentLang);
+      renderFamilies();
+
+      productsTab?.addEventListener('mouseenter', () => {
+        productDropdown.classList.remove('hidden');
+      });
+      productDropdown?.addEventListener('mouseleave', () => {
+        productDropdown.classList.add('hidden');
+      });
+    });
+
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+          dots[i].classList.add("active");
+        }
+      });
+      currentSlideIndex = index;
+    }
+
+    function currentSlide(index) {
+      showSlide(index);
+    }
+
+    function autoSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      showSlide(currentSlideIndex);
+    }
+
+    setInterval(autoSlide, 5000); // Change slide every 5 seconds
+  </script>
 </body>
 
 </html>
