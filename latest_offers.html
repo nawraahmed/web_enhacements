@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Offers - Premium Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      line-height: 1.6;
+    }
+
+    /* Top navigation */
+    .top-nav {
+      background: linear-gradient(135deg, #2d3142 0%, #1e2332 100%);
+      color: white;
+      padding: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-nav-links {
+      display: flex;
+      margin-left: 20px;
+      align-items: center;
+    }
+
+    .top-nav-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .top-nav-links a:hover {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .top-nav-links a.active {
+      font-weight: 600;
+      color: #e94560;
+      background-color: rgba(233, 69, 96, 0.1);
+    }
+
+    .top-nav-utility {
+      display: flex;
+      margin-right: 20px;
+      align-items: center;
+    }
+
+    .top-nav-utility a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .top-nav-utility a:hover {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+
+    /* Main navigation */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .main-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .main-nav-links a {
+      color: #2d3142;
+      text-decoration: none;
+      padding: 0px 20px;
+      font-weight: 600;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .main-nav-links a:hover {
+      color: #e94560;
+      background-color: rgba(233, 69, 96, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .main-nav-links a.active {
+      color: #e94560;
+      background-color: rgba(233, 69, 96, 0.1);
+    }
+
+    .search-icon {
+      margin-right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px 18px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      color: #2d3142;
+    }
+
+    .search-icon:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.2);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #2d3142 0%, #e94560 100%);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.8s ease;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      animation: slideUp 0.8s ease 0.2s both;
+    }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+      animation: fadeIn 0.8s ease 0.4s both;
+    }
+
+    .countdown-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .countdown-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Main Content */
+    main {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Offer Categories */
+    .offer-categories {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      padding: 12px 30px;
+      border: 2px solid #e94560;
+      background: transparent;
+      color: #e94560;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(233, 69, 96, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .category-btn:hover::before {
+      left: 100%;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #e94560;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3);
+    }
+
+    /* Offers Grid */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .offer-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      border: 1px solid #e0e0e0;
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #e94560 0%, #ff6b8a 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .offer-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .offer-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .offer-card {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.offer-card.hidden {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+
+    .offer-header {
+      position: relative;
+      padding: 30px;
+      background: linear-gradient(135deg, #2d3142 0%, #1e2332 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .offer-badge {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background: #e94560;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .offer-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .offer-description {
+      opacity: 0.9;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .offer-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .original-price {
+      font-size: 1.2rem;
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .discounted-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e94560;
+    }
+
+    .discount-percentage {
+      background: rgba(233, 69, 96, 0.2);
+      color: #e94560;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .offer-content {
+      padding: 30px;
+    }
+
+    .offer-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .offer-features li {
+      padding: 8px 0;
+      color: #555;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .offer-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #e94560;
+      font-weight: bold;
+    }
+
+    .offer-validity {
+      background: rgba(233, 69, 96, 0.1);
+      color: #e94560;
+      padding: 12px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .offer-btn {
+      width: 100%;
+      background: linear-gradient(70deg, #2d3142 60%, #e94560 100%);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .offer-btn:hover::before {
+      left: 100%;
+    }
+
+    .offer-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3);
+    }
+
+    /* Featured Offer */
+    .featured-offer {
+      position: relative;
+      transform: scale(1.05);
+      z-index: 2;
+    }
+
+    .featured-offer::after {
+      content: 'FEATURED';
+      position: absolute;
+      top: 15px;
+      left: -30px;
+      background: #e94560;
+      color: white;
+      padding: 8px 40px;
+      font-size: 12px;
+      font-weight: 600;
+      transform: rotate(-45deg);
+      letter-spacing: 1px;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+      background: linear-gradient(135deg, #2d3142 0%, #1e2332 100%);
+      color: white;
+      padding: 60px 40px;
+      border-radius: 25px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .newsletter-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .newsletter-description {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+      gap: 15px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 16px 20px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #e94560;
+      box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+    }
+
+    .newsletter-btn {
+      padding: 16px 30px;
+      background: #e94560;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-btn:hover {
+      background: #d63853;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .countdown-timer {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .countdown-item {
+        padding: 15px;
+      }
+
+      .countdown-number {
+        font-size: 2rem;
+      }
+
+      .offers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .main-nav {
+        padding: 15px 20px;
+      }
+
+      .main-nav-links {
+        gap: 20px;
+      }
+
+      .offer-categories {
+        gap: 10px;
+      }
+
+      .category-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .top-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .top-nav-links,
+      .top-nav-utility {
+        margin: 0;
+        justify-content: center;
+      }
+
+      .hero-section {
+        padding: 60px 20px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .newsletter-section {
+        padding: 40px 20px;
+      }
+
+      .newsletter-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+   <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-links">
+      <a href="#" data-i18n="personal">Personal</a>
+      <a href="#" class="active" data-i18n="business">Business</a>
+      <a href="#" data-i18n="global">Global</a>
+      <a href="#" data-i18n="about">About Us</a>
+    </div>
+    <div class="top-nav-utility">
+      <a href="#" data-i18n="support">Support</a>
+      <a href="#" data-i18n="account">My Account</a>
+      <a href="#" data-i18n="quickpay">Quick Pay</a>
+      <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;">عربي</a>
+
+    </div>
+  </nav>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="logo">
+       <a href="new_ui.html" id="productsTab"><img src="images/batelco_logo.png" alt="Batelco Logo" /></a>  
+      </div>
+    <div class="main-nav-links">
+      <div class="dropdown-container">
+        <a href="new_ui.html" id="productsTab" data-i18n="products">Products</a>
+        <div id="productDropdown" class="dropdown hidden">
+          <ul id="families" class="dropdown-families"></ul>
+          <div id="subItems" class="dropdown-subitems"></div>
+        </div>
+      </div>
+      <a href="#" data-i18n="latest_offers">Latest Offers</a>
+      <a href="business_onboarding.html" data-i18n="onboarding">Business Onboarding</a>
+      <a href="#" data-i18n="business_support">Business Support</a>
+    </div>
+    <div class="search-icon" id="searchIcon">🔍</div>
+  </nav>
+  <!-- Hero Section with Countdown -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">🔥 Limited Time Offers</h1>
+      <p class="hero-subtitle">Exclusive deals on our premium services - Don't miss out!</p>
+
+      <div class="countdown-timer">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">05</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">12</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">34</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">56</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Offer Categories -->
+    <div class="offer-categories">
+      <button class="category-btn active" data-category="all">All Offers</button>
+      <button class="category-btn" data-category="web">Web Services</button>
+      <button class="category-btn" data-category="marketing">Marketing</button>
+      <button class="category-btn" data-category="consulting">Consulting</button>
+      <button class="category-btn" data-category="development">Development</button>
+    </div>
+
+    <!-- Offers Grid -->
+    <div class="offers-grid">
+      <!-- Featured Offer -->
+      <div class="offer-card featured-offer" data-category="web">
+        <div class="offer-header">
+          <div class="offer-badge">Best Value</div>
+          <h3 class="offer-title">Complete Web Package</h3>
+          <p class="offer-description">Full website development with hosting and maintenance</p>
+          <div class="offer-price">
+            <span class="original-price">$2,999</span>
+            <span class="discounted-price">$1,999</span>
+            <span class="discount-percentage">33% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until December 31, 2025</div>
+          <ul class="offer-features">
+            <li>Responsive web design</li>
+            <li>SEO optimization</li>
+            <li>1 year hosting included</li>
+            <li>SSL certificate</li>
+            <li>24/7 support</li>
+            <li>Content management system</li>
+          </ul>
+          <button class="offer-btn">Claim This Offer</button>
+        </div>
+      </div>
+
+      <!-- Regular Offers -->
+      <div class="offer-card" data-category="marketing">
+        <div class="offer-header">
+          <div class="offer-badge">Popular</div>
+          <h3 class="offer-title">Digital Marketing Suite</h3>
+          <p class="offer-description">Complete digital marketing campaign management</p>
+          <div class="offer-price">
+            <span class="original-price">$1,499</span>
+            <span class="discounted-price">$999</span>
+            <span class="discount-percentage">33% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until January 15, 2026</div>
+          <ul class="offer-features">
+            <li>Social media management</li>
+            <li>Google Ads campaigns</li>
+            <li>Email marketing</li>
+            <li>Analytics & reporting</li>
+            <li>Content creation</li>
+          </ul>
+          <button class="offer-btn">Get Started</button>
+        </div>
+      </div>
+
+      <div class="offer-card" data-category="consulting">
+        <div class="offer-header">
+          <div class="offer-badge">New</div>
+          <h3 class="offer-title">Business Consultation</h3>
+          <p class="offer-description">Strategic business planning and growth consulting</p>
+          <div class="offer-price">
+            <span class="original-price">$799</span>
+            <span class="discounted-price">$599</span>
+            <span class="discount-percentage">25% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until February 28, 2026</div>
+          <ul class="offer-features">
+            <li>Market analysis</li>
+            <li>Growth strategy planning</li>
+            <li>Financial planning</li>
+            <li>Competitive analysis</li>
+            <li>Implementation roadmap</li>
+          </ul>
+          <button class="offer-btn">Book Consultation</button>
+        </div>
+      </div>
+
+      <div class="offer-card" data-category="development">
+        <div class="offer-header">
+          <div class="offer-badge">Limited</div>
+          <h3 class="offer-title">Mobile App Development</h3>
+          <p class="offer-description">Cross-platform mobile application development</p>
+          <div class="offer-price">
+            <span class="original-price">$4,999</span>
+            <span class="discounted-price">$3,499</span>
+            <span class="discount-percentage">30% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until January 31, 2026</div>
+          <ul class="offer-features">
+            <li>iOS & Android apps</li>
+            <li>UI/UX design</li>
+            <li>API integration</li>
+            <li>App store submission</li>
+            <li>3 months support</li>
+          </ul>
+          <button class="offer-btn">Start Project</button>
+        </div>
+      </div>
+
+      <div class="offer-card" data-category="web">
+        <div class="offer-header">
+          <div class="offer-badge">Flash Sale</div>
+          <h3 class="offer-title">E-commerce Platform</h3>
+          <p class="offer-description">Full-featured online store with payment integration</p>
+          <div class="offer-price">
+            <span class="original-price">$3,499</span>
+            <span class="discounted-price">$2,299</span>
+            <span class="discount-percentage">35% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until December 25, 2025</div>
+          <ul class="offer-features">
+            <li>Product catalog</li>
+            <li>Payment gateway</li>
+            <li>Inventory management</li>
+            <li>Order tracking</li>
+            <li>Admin dashboard</li>
+          </ul>
+          <button class="offer-btn">Launch Store</button>
+        </div>
+      </div>
+
+      <div class="offer-card" data-category="marketing">
+        <div class="offer-header">
+          <div class="offer-badge">Trending</div>
+          <h3 class="offer-title">SEO Optimization</h3>
+          <p class="offer-description">Complete search engine optimization package</p>
+          <div class="offer-price">
+            <span class="original-price">$899</span>
+            <span class="discounted-price">$649</span>
+            <span class="discount-percentage">28% OFF</span>
+          </div>
+        </div>
+        <div class="offer-content">
+          <div class="offer-validity">⏰ Valid until March 15, 2026</div>
+          <ul class="offer-features">
+            <li>Keyword research</li>
+            <li>On-page optimization</li>
+            <li>Link building</li>
+            <li>Technical SEO audit</li>
+            <li>Monthly reports</li>
+          </ul>
+          <button class="offer-btn">Boost Rankings</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <h2 class="newsletter-title">Never Miss an Offer</h2>
+      <p class="newsletter-description">Subscribe to our newsletter and get exclusive deals delivered to your inbox</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+<script>
+  // Countdown Timer
+  function updateCountdown() {
+    const targetDate = new Date('2026-01-01T00:00:00');
+    const now = new Date();
+    const timeDiff = targetDate - now;
+
+    if (timeDiff > 0) {
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // Category Filter
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const offerCards = document.querySelectorAll('.offer-card');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const category = button.getAttribute('data-category');
+
+      offerCards.forEach(card => {
+        const match = category === 'all' || card.getAttribute('data-category') === category;
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+
+  // Ensure correct display on load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.category-btn.active')?.click();
+  });
+</script>
+
+</body>
+</html>
+
