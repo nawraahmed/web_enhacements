@@ -1,160 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batelco Business Landing</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-      <div class="top-nav-links">
-        <a href="#" data-i18n="personal">Personal</a>
-        <a href="#" class="active" data-i18n="business">Business</a>
-        <a href="#" data-i18n="global">Global</a>
-        <a href="#" data-i18n="about">About Us</a>
-      </div>
-      <div class="top-nav-utility">
-        <a href="#" data-i18n="support">Support</a>
-        <a href="#" data-i18n="account">My Account</a>
-        <a href="#" data-i18n="quickpay">Quick Pay</a>
-        <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;"
-          >عربي</a
-        >
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batelco Business Landing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-      <div class="logo">
-        <img src="images/batelco_logo.png" alt="Batelco Logo" />
-      </div>
-      <div class="main-nav-links">
-        <a href="landing_page.html" data-i18n="home">Home</a>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-links">
+      <a href="#" data-i18n="personal">Personal</a>
+      <a href="#" class="active" data-i18n="business">Business</a>
+      <a href="#" data-i18n="global">Global</a>
+      <a href="#" data-i18n="about">About Us</a>
+    </div>
+    <div class="top-nav-utility">
+      <a href="#" data-i18n="support">Support</a>
+      <a href="#" data-i18n="account">My Account</a>
+      <a href="#" data-i18n="quickpay">Quick Pay</a>
+      <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;">عربي</a>
+    </div>
+  </nav>
 
-        <div class="dropdown-container">
-          <a href="new_ui.html" id="productsTab" data-i18n="products"
-            >Products</a
-          >
-          <div id="productDropdown" class="dropdown hidden">
-            <ul id="families" class="dropdown-families"></ul>
-            <div id="subItems" class="dropdown-subitems"></div>
-          </div>
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="logo">
+      <img src="images/batelco_logo.png" alt="Batelco Logo" />
+    </div>
+    <div class="main-nav-links">
+      <a href="landing_page.html" data-i18n="home">Home</a>
+
+      <div class="dropdown-container">
+        <a href="index.html" id="productsTab" data-i18n="products">Products</a>
+        <div id="productDropdown" class="dropdown hidden">
+          <ul id="families" class="dropdown-families"></ul>
+          <div id="subItems" class="dropdown-subitems"></div>
         </div>
-        <a href="#" data-i18n="latest_offers">Latest Offers</a>
-        <a href="business_onboarding.html" data-i18n="onboarding"
-          >Business Onboarding</a
-        >
-        <a href="#" data-i18n="business_support">Business Support</a>
-        <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
       </div>
-      <div class="search-icon" id="searchIcon">🔍</div>
-    </nav>
+      <a href="#" data-i18n="latest_offers">Latest Offers</a>
+      <a href="business_onboarding.html" data-i18n="onboarding">Business Onboarding</a>
+      <a href="#" data-i18n="business_support">Business Support</a>
+      <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
+    </div>
+    <div class="search-icon" id="searchIcon">🔍</div>
+  </nav>
 
-    <!-- Section 1: Interactive Banner -->
-    <div class="banner-slider">
-      <div
-        class="slide active"
-        style="
+  <!-- Section 1: Interactive Banner -->
+  <div class="banner-slider">
+    <div class="slide active" style="
           background-image: url('https://i.batelco.com/media/catalog/product/2/0/2025.05.05_eid_al_adha_banner_eshop_2560x853_eng.jpg');
-        "
-      ></div>
-      <div
-        class="slide"
-        style="
+        "></div>
+    <div class="slide" style="
           background-image: url('https://i.batelco.com/media/catalog/product/a/p/app_banners-01_3.png');
-        "
-      ></div>
-      <div
-        class="slide"
-        style="
+        "></div>
+    <div class="slide" style="
           background-image: url('https://i.batelco.com/media/catalog/product/n/e/new_fiber_speeds_banner_eshop_app_2560x853_eng_1_.png');
-        "
-      ></div>
-      <!-- <div class="banner-content">
+        "></div>
+    <!-- <div class="banner-content">
         <h1>Empower Your Business</h1>
         <p>Smart & Scalable Telecom Solutions</p>
         <a href="#" class="banner-button">Explore More</a>
       </div> -->
-      <div class="dots">
-        <span class="dot active" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-      </div>
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </div>
+
+  <!-- Section: Quick Actions -->
+  <section class="quick-actions">
+    <div class="quick-action">
+      <img src="images/sale.png" alt="Offers Icon" />
+      <span>Offers</span>
+    </div>
+    <div class="quick-action">
+      <img src="images/puzzle.png" alt="Products Icon" />
+      <span>Products</span>
+    </div>
+    <div class="quick-action">
+      <img src="images/store.png" alt="eServices Icon" />
+      <span>eServices</span>
+    </div>
+  </section>
+
+  <!-- Section 2: Business Categories -->
+  <section class="connectivity-section">
+    <div class="section-header">
+      <h1 class="first-section-title">Connectivity that empowers your business</h1>
+      <p class="section-subtitle">
+        Discover comprehensive business solutions designed to keep your
+        organization connected, productive, and ahead of the competition.
+      </p>
     </div>
 
-    <!-- Section: Quick Actions -->
-    <section class="quick-actions">
-      <div class="quick-action">
-        <img src="images/sale.png" alt="Offers Icon" />
-        <span>Offers</span>
-      </div>
-      <div class="quick-action">
-        <img src="images/puzzle.png" alt="Products Icon" />
-        <span>Products</span>
-      </div>
-      <div class="quick-action">
-        <img src="images/store.png" alt="eServices Icon" />
-        <span>eServices</span>
-      </div>
-    </section>
-
-    <!-- Section 2: Business Categories -->
-    <section class="connectivity-section">
-      <div class="section-header">
-        <h1 class="first-section-title">Connectivity that empowers your business</h1>
-        <p class="section-subtitle">
-          Discover comprehensive business solutions designed to keep your
-          organization connected, productive, and ahead of the competition.
-        </p>
+    <div class="business-grid">
+      <div class="category-sidebar">
+        <div class="category-card active" data-category="sme">
+          <span class="category-icon">🏪</span>
+          <div class="category-title">For SMEs</div>
+          <div class="category-subtitle">Medium enterprises</div>
+        </div>
+        <div class="category-card" data-category="enterprise">
+          <span class="category-icon">🏢</span>
+          <div class="category-title">For large enterprises</div>
+          <div class="category-subtitle">Corporate solutions</div>
+        </div>
       </div>
 
-      <div class="business-grid">
-        <div class="category-sidebar">
-          <div class="category-card active" data-category="sme">
-            <span class="category-icon">🏪</span>
-            <div class="category-title">For SMEs</div>
-            <div class="category-subtitle">Medium enterprises</div>
+      <div class="landing-services-grid">
+        <div class="landing-service-card" data-categories="sme,enterprise">
+          <div class="service-image mobility">
+            <span class="landing-service-icon">📱</span>
+            <div class="service-arrow">→</div>
           </div>
-          <div class="category-card" data-category="enterprise">
-            <span class="category-icon">🏢</span>
-            <div class="category-title">For large enterprises</div>
-            <div class="category-subtitle">Corporate solutions</div>
+          <div class="landing-service-content">
+            <h3 class="service-title">Mobility</h3>
+            <p class="service-description">
+              Discover Batelco's comprehensive range of business mobile
+              offerings and enjoy the power of constant connectivity.
+            </p>
           </div>
         </div>
 
-        <div class="landing-services-grid">
-          <div class="landing-service-card" data-categories="sme,enterprise">
-            <div class="service-image mobility">
-              <span class="landing-service-icon">📱</span>
-              <div class="service-arrow">→</div>
-            </div>
-            <div class="landing-service-content">
-              <h3 class="service-title">Mobility</h3>
-              <p class="service-description">
-                Discover Batelco's comprehensive range of business mobile
-                offerings and enjoy the power of constant connectivity.
-              </p>
-            </div>
+        <div class="landing-service-card" data-categories="sme,enterprise">
+          <div class="service-image voice">
+            <span class="landing-service-icon">🎤</span>
+            <div class="service-arrow">→</div>
           </div>
-
-          <div class="landing-service-card" data-categories="sme,enterprise">
-            <div class="service-image voice">
-              <span class="landing-service-icon">🎤</span>
-              <div class="service-arrow">→</div>
-            </div>
-            <div class="landing-service-content">
-              <h3 class="service-title">Voice Communication</h3>
-              <p class="service-description">
-                Boost teamwork with reliable voice and conferencing solutions
-                that keep your team connected anywhere.
-              </p>
-            </div>
+          <div class="landing-service-content">
+            <h3 class="service-title">Voice Communication</h3>
+            <p class="service-description">
+              Boost teamwork with reliable voice and conferencing solutions
+              that keep your team connected anywhere.
+            </p>
           </div>
+        </div>
 
-          <!-- <div class="landing-service-card" data-categories="sme,enterprise">
+        <!-- <div class="landing-service-card" data-categories="sme,enterprise">
             <div class="service-image messaging">
               <span class="landing-service-icon">💬</span>
               <div class="service-arrow">→</div>
@@ -167,385 +153,390 @@
               </p>
             </div>
           </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- Condensed Why Batelco Section -->
+  <section class="landing-why-batelco-section">
+    <div class="floating-elements">
+      <div class="floating-circle"></div>
+      <div class="floating-circle"></div>
+      <div class="floating-circle"></div>
+    </div>
+
+    <div class="landing-container">
+      <!-- Section Header -->
+      <div class="landing-section-header">
+        <span class="landing-section-tag">Why Partner With Us</span>
+        <h2 class="landing-section-title">
+          Why <span class="landing-highlight">Batelco</span> is the Smart Choice
+        </h2>
+        <p class="landing-section-subtitle">
+          Trusted by 5000+ businesses with 40+ years of experience.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">100+</span>
+          <div class="stat-label">Trusted Businesses</div>
+          <div class="stat-description">Companies rely on our services</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">#1</span>
+          <div class="stat-label">Leading Network</div>
+          <div class="stat-description">in Business Mobile Market share</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">+20K</span>
+          <div class="stat-label">Uptime Guarantee</div>
+          <div class="stat-description">Unified communications
+            & collaboration subscriptions</div>
         </div>
       </div>
-    </section>
-    <!-- Condensed Why Batelco Section -->
-    <section class="landing-why-batelco-section">
-      <div class="floating-elements">
-          <div class="floating-circle"></div>
-          <div class="floating-circle"></div>
-          <div class="floating-circle"></div>
-      </div>
-      
-      <div class="landing-container">
-          <!-- Section Header -->
-          <div class="landing-section-header">
-              <span class="landing-section-tag">Why Partner With Us</span>
-              <h2 class="landing-section-title">
-                  Why <span class="landing-highlight">Batelco</span> is the Smart Choice
-              </h2>
-              <p class="landing-section-subtitle">
-                  Trusted by 5000+ businesses with 40+ years of experience.
-              </p>
-          </div>
 
-          <!-- Stats Grid -->
-          <div class="stats-grid">
-              <div class="stat-card">
-                  <span class="stat-number">100+</span>
-                  <div class="stat-label">Trusted Businesses</div>
-                  <div class="stat-description">Companies rely on our services</div>
-              </div>
-              <div class="stat-card">
-                  <span class="stat-number">#1</span>
-                  <div class="stat-label">Leading Network</div>
-                  <div class="stat-description">in Business Mobile Market share</div>
-              </div>
-              <div class="stat-card">
-                  <span class="stat-number">+20K</span>
-                  <div class="stat-label">Uptime Guarantee</div>
-                  <div class="stat-description">Unified communications
-                    & collaboration subscriptions</div>
-              </div>
-          </div>
-
-          <!-- CTA Button -->
-          <!-- <div class="landing-more-button-wrapper">
+      <!-- CTA Button -->
+      <!-- <div class="landing-more-button-wrapper">
               <a href="#" class="landing-more-button">
                   Learn More About Us
               </a>
           </div>
       </div> -->
-       <!-- View More CTA -->
-       <div class="landing-more-button-wrapper">
-        <a href="/why-batelco" class="landing-more-button"
-          >View More Benefits</a
-        >
+      <!-- View More CTA -->
+      <div class="landing-more-button-wrapper">
+        <a href="/why-batelco" class="landing-more-button">View More Benefits</a>
       </div>
   </section>
 
-        <!-- Top 3 Feature Cards
+  <!-- Top 3 Feature Cards
         <div class="landing-features-grid">
           <!-- Keep these 3 feature cards: Local Expertise, Scalable Solutions, Security -->
-          <!-- Copy exact feature blocks from original code -->
+  <!-- Copy exact feature blocks from original code -->
+  </div>
+
+
+  </div>
+  </section>
+
+  <!-- Section 3: Hot Products -->
+  <!-- Section 3: Hot Products -->
+  <section class="enhanced-content-section hot-products-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Hot Products</h2>
+      </div>
+      <div class="hot-products-grid">
+        <div class="hot-product-card">
+          <div class="hot-product-icon">🛡️</div>
+          <h3 class="hot-product-title">Managed Firewall</h3>
+          <p class="hot-product-description">Keep your business safe with 24/7 monitored firewalls and advanced threat
+            protection.</p>
         </div>
-
-       
+        <div class="hot-product-card">
+          <div class="hot-product-icon">🚚</div>
+          <h3 class="hot-product-title">Fleet Management</h3>
+          <p class="hot-product-description">Real-time vehicle tracking and analytics for efficient logistics and fleet
+            optimization.</p>
+        </div>
       </div>
-    </section>
-
-    <!-- Section 3: Hot Products -->
-    <!-- Section 3: Hot Products -->
-    <section class="enhanced-content-section hot-products-section">
-      <div class="section-container">
-          <div class="section-header">
-              <h2 class="section-title">Hot Products</h2>
-          </div>
-          <div class="hot-products-grid">
-              <div class="hot-product-card">
-                  <div class="hot-product-icon">🛡️</div>
-                  <h3 class="hot-product-title">Managed Firewall</h3>
-                  <p class="hot-product-description">Keep your business safe with 24/7 monitored firewalls and advanced threat protection.</p>
-              </div>
-              <div class="hot-product-card">
-                  <div class="hot-product-icon">🚚</div>
-                  <h3 class="hot-product-title">Fleet Management</h3>
-                  <p class="hot-product-description">Real-time vehicle tracking and analytics for efficient logistics and fleet optimization.</p>
-              </div>
-          </div>
-      </div>
+    </div>
   </section>
 
-    <!-- Section 4: Offers -->
-    <section class="enhanced-content-section latest-offers-section">
-      <div class="section-container">
-          <div class="section-header">
-              <h2 class="section-title">Latest Offers</h2>
-          </div>
-          <div class="offers-grid">
-              <div class="offer-card">
-                  <div class="offer-badge">Limited Time</div>
-                  <h3 class="offer-title">50% Off SME Broadband</h3>
-                  <p class="offer-description">Special rates for startups and small businesses. Get high-speed internet at unbeatable prices.</p>
-                  <a href="#" class="offer-cta">Claim Offer</a>
-              </div>
-              <div class="offer-card">
-                  <div class="offer-badge">New Launch</div>
-                  <h3 class="offer-title">Free Setup on Smart Solutions</h3>
-                  <p class="offer-description">Deploy smart solutions with no upfront cost. Professional installation and configuration included.</p>
-                  <a href="#" class="offer-cta">Learn More</a>
-              </div>
-          </div>
+  <!-- Section 4: Offers -->
+  <section class="enhanced-content-section latest-offers-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Latest Offers</h2>
       </div>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <div class="offer-badge">Limited Time</div>
+          <h3 class="offer-title">50% Off SME Broadband</h3>
+          <p class="offer-description">Special rates for startups and small businesses. Get high-speed internet at
+            unbeatable prices.</p>
+          <a href="#" class="offer-cta">Claim Offer</a>
+        </div>
+        <div class="offer-card">
+          <div class="offer-badge">New Launch</div>
+          <h3 class="offer-title">Free Setup on Smart Solutions</h3>
+          <p class="offer-description">Deploy smart solutions with no upfront cost. Professional installation and
+            configuration included.</p>
+          <a href="#" class="offer-cta">Learn More</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-     <!-- Section 5: Success Stories -->
-     <section class="enhanced-content-section success-stories-section">
-      <div class="section-container">
-          <div class="section-header">
-              <h2 class="section-title">Success Stories</h2>
-          </div>
-          <div class="success-story-card">
-              <div class="success-story-layout">
-                  <div class="success-story-image">
-                      <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop&crop=center" alt="AlMansoori Engineering Success Story" />
-                  </div>
-                  <div class="success-story-content">
-                      <div class="success-story-quote">"</div>
-                      <h3 class="success-company-name">AlMansoori Engineering</h3>
-                      <p class="success-story-text">
-                          Batelco transformed our operations through smart solutions and high-speed connectivity, enabling us to scale our engineering projects across multiple locations seamlessly.
-                      </p>
-                      <p class="success-client-info">— Chief Technology Officer, AlMansoori</p>
-                  </div>
-              </div>
-          </div>
+  <!-- Section 5: Success Stories -->
+  <section class="enhanced-content-section success-stories-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Success Stories</h2>
       </div>
+      <div class="success-story-card">
+        <div class="success-story-layout">
+          <div class="success-story-image">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop&crop=center"
+              alt="AlMansoori Engineering Success Story" />
+          </div>
+          <div class="success-story-content">
+            <div class="success-story-quote">"</div>
+            <h3 class="success-company-name">AlMansoori Engineering</h3>
+            <p class="success-story-text">
+              Batelco transformed our operations through smart solutions and high-speed connectivity, enabling us to
+              scale our engineering projects across multiple locations seamlessly.
+            </p>
+            <p class="success-client-info">— Chief Technology Officer, AlMansoori</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      let currentLang = 'en'
-      const originalTexts = {}
-      let translations = {}
-      let currentSlideIndex = 0
-      const slides = document.querySelectorAll('.slide')
-      const dots = document.querySelectorAll('.dot')
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    let currentLang = 'en'
+    const originalTexts = {}
+    let translations = {}
+    let currentSlideIndex = 0
+    const slides = document.querySelectorAll('.slide')
+    const dots = document.querySelectorAll('.dot')
 
-      const families = [
-        {
-          key: 'security',
-          icon: 'shield-check',
-          subItems: [{ key: 'managed_firewall' }]
-        },
-        {
-          key: 'smart_solutions',
-          icon: 'sparkles',
-          subItems: [
-            { key: 'managed_wifi' },
-            { key: 'smart_board' },
-            { key: 'digital_screen' },
-            { key: 'elv' },
-            { key: 'home_automation' },
-            { key: 'fleet_management' }
-          ]
-        },
-        {
-          key: 'messaging',
-          icon: 'message-circle',
-          subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
-        },
-        {
-          key: 'hosting',
-          icon: 'database',
-          subItems: [
-            { key: 'email' },
-            { key: 'datacenter' },
-            { key: 'continuity' }
-          ]
-        },
-        {
-          key: 'connectivity',
-          icon: 'wifi',
-          subItems: [
-            { key: 'fiber_broadband' },
-            { key: 'ipvpn' },
-            { key: 'sdwan' }
-          ]
-        },
-        {
-          key: 'voice',
-          icon: 'phone',
-          subItems: [
-            { key: 'unified_comm' },
-            { key: 'cloud_uc' },
-            { key: 'fixed_voice' },
-            { key: 'isdn' }
-          ]
-        },
-        {
-          key: 'mobile',
-          icon: 'smartphone',
-          subItems: [{ key: 'postpaid' }, { key: 'broadband' }, { key: 'm2m' }]
-        }
-      ]
-
-      const familiesList = document.getElementById('families')
-      const subItemsList = document.getElementById('subItems')
-      const productsTab = document.getElementById('productsTab')
-      const productDropdown = document.getElementById('productDropdown')
-
-      // 🔍 Search icon
-      document.getElementById('searchIcon')?.addEventListener('click', () => {
-        window.location.href = 'search.html'
-      })
-
-      // 🧠 Save original English content
-      function cacheOriginalText() {
-        document.querySelectorAll('[data-i18n]').forEach((el) => {
-          const key = el.getAttribute('data-i18n')
-          originalTexts[key] = el.innerHTML
-        })
+    const families = [
+      {
+        key: 'security',
+        icon: 'shield-check',
+        subItems: [{ key: 'managed_firewall' }]
+      },
+      {
+        key: 'smart_solutions',
+        icon: 'sparkles',
+        subItems: [
+          { key: 'managed_wifi' },
+          { key: 'smart_board' },
+          { key: 'digital_screen' },
+          { key: 'elv' },
+          { key: 'home_automation' },
+          { key: 'fleet_management' }
+        ]
+      },
+      {
+        key: 'messaging',
+        icon: 'message-circle',
+        subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
+      },
+      {
+        key: 'hosting',
+        icon: 'database',
+        subItems: [
+          { key: 'email' },
+          { key: 'datacenter' },
+          { key: 'continuity' }
+        ]
+      },
+      {
+        key: 'connectivity',
+        icon: 'wifi',
+        subItems: [
+          { key: 'fiber_broadband' },
+          { key: 'ipvpn' },
+          { key: 'sdwan' }
+        ]
+      },
+      {
+        key: 'voice',
+        icon: 'phone',
+        subItems: [
+          { key: 'unified_comm' },
+          { key: 'cloud_uc' },
+          { key: 'fixed_voice' },
+          { key: 'isdn' }
+        ]
+      },
+      {
+        key: 'mobile',
+        icon: 'smartphone',
+        subItems: [{ key: 'postpaid' }, { key: 'broadband' }, { key: 'm2m' }]
       }
+    ]
 
-      // 📦 Render dropdown categories
-      function renderFamilies() {
-        familiesList.innerHTML = families
-          .map(
-            (fam, idx) => `
+    const familiesList = document.getElementById('families')
+    const subItemsList = document.getElementById('subItems')
+    const productsTab = document.getElementById('productsTab')
+    const productDropdown = document.getElementById('productDropdown')
+
+    // 🔍 Search icon
+    document.getElementById('searchIcon')?.addEventListener('click', () => {
+      window.location.href = 'search.html'
+    })
+
+    // 🧠 Save original English content
+    function cacheOriginalText() {
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n')
+        originalTexts[key] = el.innerHTML
+      })
+    }
+
+    // 📦 Render dropdown categories
+    function renderFamilies() {
+      familiesList.innerHTML = families
+        .map(
+          (fam, idx) => `
         <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
           <i data-lucide="${fam.icon}"></i> ${translations[fam.key] || fam.key}
         </li>
       `
-          )
-          .join('')
-        lucide.createIcons()
-      }
+        )
+        .join('')
+      lucide.createIcons()
+    }
 
-      // 🧩 Render subitems when hovering a category
-      function renderSubItems(idx) {
-        subItemsList.innerHTML = families[idx].subItems
-          .map(
-            (sub) =>
-              `<div class="subitem">${translations[sub.key] || sub.key}</div>`
-          )
-          .join('')
-      }
+    // 🧩 Render subitems when hovering a category
+    function renderSubItems(idx) {
+      subItemsList.innerHTML = families[idx].subItems
+        .map(
+          (sub) =>
+            `<div class="subitem">${translations[sub.key] || sub.key}</div>`
+        )
+        .join('')
+    }
 
-      // 🌐 Language switcher
-      async function setLanguage(lang) {
-        if (lang === 'ar') {
-          try {
-            const response = await fetch('./locales/ar.json')
-            translations = await response.json()
+    // 🌐 Language switcher
+    async function setLanguage(lang) {
+      if (lang === 'ar') {
+        try {
+          const response = await fetch('./locales/ar.json')
+          translations = await response.json()
 
-            document.documentElement.lang = 'ar'
-            document.documentElement.dir = 'rtl'
-            document.body.style.fontFamily = "'Cairo', sans-serif"
-
-            document.querySelectorAll('[data-i18n]').forEach((el) => {
-              const key = el.getAttribute('data-i18n')
-              const html = translations[key]
-              if (html) el.innerHTML = html
-            })
-
-            renderFamilies()
-            document.getElementById('lang-btn').textContent = 'English'
-          } catch (err) {
-            console.error('Failed to load Arabic translations:', err)
-          }
-        } else {
-          translations = {} // clear translations
-
-          document.documentElement.lang = 'en'
-          document.documentElement.dir = 'ltr'
-          document.body.style.fontFamily =
-            "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          document.documentElement.lang = 'ar'
+          document.documentElement.dir = 'rtl'
+          document.body.style.fontFamily = "'Cairo', sans-serif"
 
           document.querySelectorAll('[data-i18n]').forEach((el) => {
             const key = el.getAttribute('data-i18n')
-            if (originalTexts[key]) {
-              el.innerHTML = originalTexts[key]
-            }
+            const html = translations[key]
+            if (html) el.innerHTML = html
           })
 
           renderFamilies()
-          document.getElementById('lang-btn').textContent = 'عربي'
+          document.getElementById('lang-btn').textContent = 'English'
+        } catch (err) {
+          console.error('Failed to load Arabic translations:', err)
         }
+      } else {
+        translations = {} // clear translations
 
-        currentLang = lang
-      }
+        document.documentElement.lang = 'en'
+        document.documentElement.dir = 'ltr'
+        document.body.style.fontFamily =
+          "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
 
-      function toggleLanguage() {
-        const newLang = currentLang === 'en' ? 'ar' : 'en'
-        setLanguage(newLang)
-      }
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('active', i === index)
-          dots[i].classList.toggle('active', i === index)
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n')
+          if (originalTexts[key]) {
+            el.innerHTML = originalTexts[key]
+          }
         })
-        currentSlideIndex = index
-      }
 
-      function currentSlide(index) {
-        showSlide(index)
-      }
-
-      function autoSlide() {
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length
-        showSlide(currentSlideIndex)
-      }
-
-      setInterval(autoSlide, 5000)
-
-      // 🎬 Initialize on page load
-      window.addEventListener('DOMContentLoaded', () => {
-        cacheOriginalText()
-        setLanguage(currentLang)
         renderFamilies()
+        document.getElementById('lang-btn').textContent = 'عربي'
+      }
 
-        productsTab?.addEventListener('mouseenter', () => {
-          productDropdown.classList.remove('hidden')
-        })
-        productDropdown?.addEventListener('mouseleave', () => {
-          productDropdown.classList.add('hidden')
+      currentLang = lang
+    }
+
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ar' : 'en'
+      setLanguage(newLang)
+    }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index)
+        dots[i].classList.toggle('active', i === index)
+      })
+      currentSlideIndex = index
+    }
+
+    function currentSlide(index) {
+      showSlide(index)
+    }
+
+    function autoSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length
+      showSlide(currentSlideIndex)
+    }
+
+    setInterval(autoSlide, 5000)
+
+    // 🎬 Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      cacheOriginalText()
+      setLanguage(currentLang)
+      renderFamilies()
+
+      productsTab?.addEventListener('mouseenter', () => {
+        productDropdown.classList.remove('hidden')
+      })
+      productDropdown?.addEventListener('mouseleave', () => {
+        productDropdown.classList.add('hidden')
+      })
+    })
+
+    // Category filtering functionality
+    const categoryCards = document.querySelectorAll('.category-card')
+    const serviceCards = document.querySelectorAll('.service-card')
+
+    categoryCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        // Remove active class from all cards
+        categoryCards.forEach((c) => c.classList.remove('active'))
+        // Add active class to clicked card
+        card.classList.add('active')
+
+        const selectedCategory = card.dataset.category
+
+        // Show/hide service cards based on category
+        serviceCards.forEach((serviceCard) => {
+          const categories = serviceCard.dataset.categories.split(',')
+
+          if (
+            selectedCategory === 'all' ||
+            categories.includes(selectedCategory)
+          ) {
+            serviceCard.style.display = 'block'
+            setTimeout(() => {
+              serviceCard.style.opacity = '1'
+              serviceCard.style.transform = 'translateY(0)'
+            }, 100)
+          } else {
+            serviceCard.style.opacity = '0'
+            serviceCard.style.transform = 'translateY(20px)'
+            setTimeout(() => {
+              serviceCard.style.display = 'none'
+            }, 300)
+          }
         })
       })
+    })
 
-      // Category filtering functionality
-      const categoryCards = document.querySelectorAll('.category-card')
-      const serviceCards = document.querySelectorAll('.service-card')
-
-      categoryCards.forEach((card) => {
-        card.addEventListener('click', () => {
-          // Remove active class from all cards
-          categoryCards.forEach((c) => c.classList.remove('active'))
-          // Add active class to clicked card
-          card.classList.add('active')
-
-          const selectedCategory = card.dataset.category
-
-          // Show/hide service cards based on category
-          serviceCards.forEach((serviceCard) => {
-            const categories = serviceCard.dataset.categories.split(',')
-
-            if (
-              selectedCategory === 'all' ||
-              categories.includes(selectedCategory)
-            ) {
-              serviceCard.style.display = 'block'
-              setTimeout(() => {
-                serviceCard.style.opacity = '1'
-                serviceCard.style.transform = 'translateY(0)'
-              }, 100)
-            } else {
-              serviceCard.style.opacity = '0'
-              serviceCard.style.transform = 'translateY(20px)'
-              setTimeout(() => {
-                serviceCard.style.display = 'none'
-              }, 300)
-            }
-          })
-        })
+    // Add hover effects for service cards
+    serviceCards.forEach((card) => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-5px) scale(1.02)'
       })
 
-      // Add hover effects for service cards
-      serviceCards.forEach((card) => {
-        card.addEventListener('mouseenter', () => {
-          card.style.transform = 'translateY(-5px) scale(1.02)'
-        })
-
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'translateY(0) scale(1)'
-        })
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)'
       })
+    })
 
-      // Initialize with smooth transitions
-      serviceCards.forEach((card) => {
-        card.style.transition = 'all 0.3s ease'
-      })
-    </script>
-  </body>
+    // Initialize with smooth transitions
+    serviceCards.forEach((card) => {
+      card.style.transition = 'all 0.3s ease'
+    })
+  </script>
+</body>
+
 </html>

@@ -1,764 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="page_title">
-      Why Batelco - Leading Network in Bahrain
-    </title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-      <div class="top-nav-links">
-        <a href="#" data-i18n="personal">Personal</a>
-        <a href="#" class="active" data-i18n="business">Business</a>
-        <a href="#" data-i18n="global">Global</a>
-        <a href="#" data-i18n="about">About Us</a>
-      </div>
-      <div class="top-nav-utility">
-        <a href="#" data-i18n="support">Support</a>
-        <a href="#" data-i18n="account">My Account</a>
-        <a href="#" data-i18n="quickpay">Quick Pay</a>
-        <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;"
-          >عربي</a
-        >
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">
+    Why Batelco - Leading Network in Bahrain
+  </title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+</head>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-      <div class="logo">
-        <img src="images/batelco_logo.png" alt="Batelco Logo" />
-      </div>
-      <div class="main-nav-links">
-        <a href="landing_page.html" data-i18n="home">Home</a>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-links">
+      <a href="#" data-i18n="personal">Personal</a>
+      <a href="#" class="active" data-i18n="business">Business</a>
+      <a href="#" data-i18n="global">Global</a>
+      <a href="#" data-i18n="about">About Us</a>
+    </div>
+    <div class="top-nav-utility">
+      <a href="#" data-i18n="support">Support</a>
+      <a href="#" data-i18n="account">My Account</a>
+      <a href="#" data-i18n="quickpay">Quick Pay</a>
+      <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;">عربي</a>
+    </div>
+  </nav>
 
-        <div class="dropdown-container">
-          <a href="new_ui.html" id="productsTab" data-i18n="products"
-            >Products</a
-          >
-          <div id="productDropdown" class="dropdown hidden">
-            <ul id="families" class="dropdown-families"></ul>
-            <div id="subItems" class="dropdown-subitems"></div>
-          </div>
-        </div>
-        <a href="#" data-i18n="latest_offers">Latest Offers</a>
-        <a href="business_onboarding.html" data-i18n="onboarding"
-          >Business Onboarding</a
-        >
-        <a href="#" data-i18n="business_support">Business Support</a>
-        <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
-      </div>
-      <div class="search-icon" id="searchIcon">🔍</div>
-    </nav>
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="logo">
+      <img src="images/batelco_logo.png" alt="Batelco Logo" />
+    </div>
+    <div class="main-nav-links">
+      <a href="landing_page.html" data-i18n="home">Home</a>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">Bahrain's Leading Network</h1>
-          <p class="hero-subtitle">Connecting Bahrain for Over 140 Years</p>
-          <p class="hero-description">
-            Experience the power of Bahrain's most trusted telecommunications
-            provider. From pioneering the first telephone service in 1981 to
-            leading the 5G revolution today, Batelco continues to set the
-            standard for connectivity excellence across the Kingdom.
-          </p>
-        </div>
-      </section>
-
-      <!-- Tab Navigation -->
-      <div class="tab-navigation">
-        <button class="tab-btn active" onclick="switchTab('network', event)">
-          Network Excellence
-        </button>
-        <button class="tab-btn" onclick="switchTab('innovation', event)">
-          Innovation Leadership
-        </button>
-        <button class="tab-btn" onclick="switchTab('coverage', event)">
-          Coverage & Reliability
-        </button>
-        <button class="tab-btn" onclick="switchTab('success', event)">
-          Success Stories
-        </button>
-      </div>
-
-      <!-- Network Excellence Tab -->
-      <div class="tab-content">
-        <div id="network" class="tab-pane active">
-          <div class="content-section">
-            <h2>Network Excellence That Defines Bahrain</h2>
-            <p>
-              Batelco operates the most advanced and comprehensive
-              telecommunications network in Bahrain, delivering unmatched
-              performance and reliability to millions of customers across the
-              Kingdom.
-            </p>
-          </div>
-
-          <div class="services">
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=5G"
-                  alt="5G Network"
-                  title="5G Network"
-                />
-              </div>
-              <div class="service-content">
-                <h2>5G Network Leadership</h2>
-                <p>
-                  First to launch commercial 5G services in Bahrain with
-                  ultra-low latency and blazing-fast speeds up to 1.2 Gbps. Our
-                  5G network covers 95% of populated areas with plans for
-                  complete nationwide coverage.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=FIBER"
-                  alt="Fiber Network"
-                  title="Fiber Network"
-                />
-              </div>
-              <div class="service-content">
-                <h2>Fiber Infrastructure</h2>
-                <p>
-                  Extensive fiber-optic network spanning over 5,000 kilometers
-                  across Bahrain, providing lightning-fast internet speeds up to
-                  1 Gbps for homes and businesses with 99.9% uptime guarantee.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=4G"
-                  alt="4G Coverage"
-                  title="4G Coverage"
-                />
-              </div>
-              <div class="service-content">
-                <h2>Superior 4G Coverage</h2>
-                <p>
-                  Complete 4G LTE coverage across all of Bahrain with advanced
-                  carrier aggregation technology, delivering consistent speeds
-                  and seamless connectivity in urban and rural areas alike.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=CLOUD"
-                  alt="Cloud Services"
-                  title="Cloud Services"
-                />
-              </div>
-              <div class="service-content">
-                <h2>Cloud & Data Centers</h2>
-                <p>
-                  State-of-the-art data centers with Tier III+ certification,
-                  providing secure cloud services, disaster recovery, and
-                  enterprise-grade hosting solutions with 24/7 monitoring and
-                  support.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="use-cases-grid">
-            <div class="use-case-card">
-              <h3>Network Performance</h3>
-              <p>
-                Consistently ranked #1 in Bahrain for network speed and
-                reliability by independent testing organizations, with average
-                download speeds 40% faster than competitors.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>Infrastructure Investment</h3>
-              <p>
-                Over BD 200 million invested in network infrastructure upgrades
-                in the past 5 years, ensuring cutting-edge technology and
-                future-ready connectivity.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>International Connectivity</h3>
-              <p>
-                Multiple submarine cable systems connecting Bahrain to the
-                world, including direct links to Saudi Arabia, Kuwait, and major
-                international internet hubs.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Innovation Leadership Tab -->
-        <div id="innovation" class="tab-pane">
-          <div class="content-section">
-            <h2>Innovation That Shapes Tomorrow</h2>
-            <p>
-              Batelco has been at the forefront of telecommunications
-              innovation, introducing groundbreaking technologies and services
-              that transform how Bahrain connects with the world.
-            </p>
-          </div>
-
-          <div class="services">
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=IoT"
-                  alt="IoT Solutions"
-                  title="IoT Solutions"
-                />
-              </div>
-              <div class="service-content">
-                <h2>IoT & Smart City Solutions</h2>
-                <p>
-                  Leading Bahrain's smart city transformation with comprehensive
-                  IoT platforms, smart meters, traffic management systems, and
-                  environmental monitoring solutions.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=AI"
-                  alt="AI Technology"
-                  title="AI Technology"
-                />
-              </div>
-              <div class="service-content">
-                <h2>AI-Powered Services</h2>
-                <p>
-                  Implementing artificial intelligence across our network for
-                  predictive maintenance, automated customer service, and
-                  intelligent traffic optimization for superior user experience.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=EDGE"
-                  alt="Edge Computing"
-                  title="Edge Computing"
-                />
-              </div>
-              <div class="service-content">
-                <h2>Edge Computing</h2>
-                <p>
-                  Deployed edge computing nodes across Bahrain to reduce latency
-                  for critical applications, supporting autonomous vehicles,
-                  AR/VR, and real-time industrial applications.
-                </p>
-              </div>
-            </div>
-
-            <div class="service-card">
-              <div class="service-icon">
-                <img
-                  src="https://via.placeholder.com/60x60/e94560/ffffff?text=SEC"
-                  alt="Cybersecurity"
-                  title="Cybersecurity"
-                />
-              </div>
-              <div class="service-content">
-                <h2>Advanced Cybersecurity</h2>
-                <p>
-                  Comprehensive cybersecurity solutions including threat
-                  detection, DDoS protection, and secure connectivity services,
-                  protecting businesses and government entities.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              First in Bahrain Achievements
-            </div>
-            <div class="faq-answer">
-              <p>
-                • First to launch 5G commercial services in Bahrain<br />
-                • First to provide 1 Gbps fiber internet to homes<br />
-                • First to implement VoLTE technology<br />
-                • First to launch comprehensive IoT platform<br />
-                • First to deploy AI-powered network optimization
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coverage & Reliability Tab -->
-        <div id="coverage" class="tab-pane">
-          <div class="content-section">
-            <h2>Unmatched Coverage & Reliability</h2>
-            <p>
-              Our network reaches every corner of Bahrain, ensuring reliable
-              connectivity for all residents and businesses, from Manama's
-              bustling city center to the most remote villages.
-            </p>
-          </div>
-
-          <div class="use-cases-grid">
-            <div class="use-case-card">
-              <h3>99.9% Network Uptime</h3>
-              <p>
-                Industry-leading reliability with redundant systems, automatic
-                failover, and 24/7 network monitoring ensuring minimal service
-                interruptions.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>Complete Geographic Coverage</h3>
-              <p>
-                100% population coverage across all governorates in Bahrain,
-                including islands, industrial areas, and remote locations with
-                consistent service quality.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>Disaster Recovery</h3>
-              <p>
-                Comprehensive disaster recovery and business continuity plans
-                with multiple data center locations and backup power systems
-                ensuring service during emergencies.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>24/7 Technical Support</h3>
-              <p>
-                Round-the-clock technical support with local expertise,
-                multilingual customer service, and dedicated account management
-                for enterprise customers.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>Indoor Coverage Excellence</h3>
-              <p>
-                Advanced indoor coverage solutions including small cells, DAS
-                systems, and femtocells ensuring strong signal in buildings,
-                malls, and underground areas.
-              </p>
-            </div>
-            <div class="use-case-card">
-              <h3>Rural Connectivity</h3>
-              <p>
-                Committed to bridging the digital divide with specialized rural
-                connectivity solutions ensuring high-speed internet access in
-                all areas of Bahrain.
-              </p>
-            </div>
-          </div>
-
-          <div class="content-section">
-            <h2>Network Statistics</h2>
-            <div class="success-story">
-              <div class="story-layout">
-                <div class="story-text">
-                  <h3>Network Performance Metrics</h3>
-                  <p><strong>5G Coverage:</strong> 95% of populated areas</p>
-                  <p><strong>4G Coverage:</strong> 100% nationwide</p>
-                  <p><strong>Fiber Network:</strong> 5,000+ kilometers</p>
-                  <p><strong>Data Centers:</strong> 3 Tier III+ facilities</p>
-                  <p>
-                    <strong>International Gateways:</strong> 8 submarine cables
-                  </p>
-                  <p><strong>Network Uptime:</strong> 99.9% guaranteed</p>
-                  <p>
-                    <strong>Customer Base:</strong> 2.5+ million subscribers
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Success Stories Tab -->
-        <div id="success" class="tab-pane">
-          <div class="content-section">
-            <h2>Success Stories & Achievements</h2>
-            <p>
-              Our commitment to excellence has enabled countless success stories
-              across Bahrain, from supporting major government initiatives to
-              empowering small businesses with world-class connectivity.
-            </p>
-          </div>
-
-          <div class="success-story">
-            <div class="story-layout">
-              <div class="success-images">
-                <div class="image-carousel">
-                  <div class="carousel-track">
-                    <div class="carousel-slide active">
-                      <img
-                        src="https://via.placeholder.com/400x250/2d3142/ffffff?text=Government+Digital+Transformation"
-                        alt="Government Project"
-                      />
-                    </div>
-                    <div class="carousel-slide">
-                      <img
-                        src="https://via.placeholder.com/400x250/e94560/ffffff?text=Smart+City+Bahrain"
-                        alt="Smart City"
-                      />
-                    </div>
-                    <div class="carousel-slide">
-                      <img
-                        src="https://via.placeholder.com/400x250/2d3142/ffffff?text=5G+Network+Launch"
-                        alt="5G Launch"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-indicators">
-                    <span
-                      class="indicator active"
-                      onclick="showSlide(0)"
-                    ></span>
-                    <span class="indicator" onclick="showSlide(1)"></span>
-                    <span class="indicator" onclick="showSlide(2)"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="story-text">
-                <h3>Government Digital Transformation</h3>
-                <p>
-                  Partnered with the Government of Bahrain to implement
-                  comprehensive digital transformation initiatives, including
-                  smart government services, digital ID systems, and secure
-                  cloud infrastructure serving over 1.7 million citizens.
-                </p>
-                <p class="client">- Kingdom of Bahrain eGovernment Authority</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="success-story">
-            <h3>Banking Sector Digitalization</h3>
-            <p>
-              Provided critical infrastructure and cybersecurity solutions for
-              Bahrain's banking sector, enabling secure digital banking services
-              and supporting the Central Bank of Bahrain's open banking
-              initiatives.
-            </p>
-            <p class="client">
-              - Central Bank of Bahrain & Major Commercial Banks
-            </p>
-          </div>
-
-          <div class="success-story">
-            <h3>Bahrain International Circuit</h3>
-            <p>
-              Delivered ultra-high-speed connectivity and broadcast solutions
-              for Formula 1 Bahrain Grand Prix, enabling 4K live streaming and
-              real-time telemetry for teams, reaching millions of viewers
-              worldwide.
-            </p>
-            <p class="client">- Bahrain International Circuit</p>
-          </div>
-
-          <div class="success-story">
-            <h3>Industrial Sector Connectivity</h3>
-            <p>
-              Supported Bahrain's industrial sector with dedicated fiber
-              connections, IoT solutions, and cloud services, enabling Industry
-              4.0 transformation and increasing operational efficiency by 35%.
-            </p>
-            <p class="client">
-              - Aluminum Bahrain (Alba) & Industrial Partners
-            </p>
-          </div>
-
-          <div class="content-section">
-            <h2>Awards & Recognition</h2>
-            <div class="use-cases-grid">
-              <div class="use-case-card">
-                <h3>Telecom Company of the Year</h3>
-                <p>
-                  Middle East Technology Excellence Awards 2024 - Recognized for
-                  outstanding innovation and service excellence in
-                  telecommunications.
-                </p>
-              </div>
-              <div class="use-case-card">
-                <h3>Best 5G Network</h3>
-                <p>
-                  GCC Telecom Awards 2024 - Honored for deploying the most
-                  advanced 5G network infrastructure in the region.
-                </p>
-              </div>
-              <div class="use-case-card">
-                <h3>Digital Transformation Leader</h3>
-                <p>
-                  Bahrain Excellence Awards 2023 - Recognized for leading
-                  digital transformation initiatives across the Kingdom.
-                </p>
-              </div>
-              <div class="use-case-card">
-                <h3>Customer Service Excellence</h3>
-                <p>
-                  Customer Satisfaction Index 2024 - Achieved 95% customer
-                  satisfaction rating, highest in Bahrain's telecom sector.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-            <a href="#sister-companies" class="banner-button"
-              >See Our Partners</a
-            >
-          </div>
+      <div class="dropdown-container">
+      <a href="index.html" id="productsTab" data-i18n="products">Products</a>
+        <div id="productDropdown" class="dropdown hidden">
+          <ul id="families" class="dropdown-families"></ul>
+          <div id="subItems" class="dropdown-subitems"></div>
         </div>
       </div>
-    </main>
+      <a href="#" data-i18n="latest_offers">Latest Offers</a>
+      <a href="business_onboarding.html" data-i18n="onboarding">Business Onboarding</a>
+      <a href="#" data-i18n="business_support">Business Support</a>
+      <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
+    </div>
+    <div class="search-icon" id="searchIcon">🔍</div>
+  </nav>
 
-    <!-- Sister Companies Section -->
-    <section id="sister-companies" class="sister-companies-section">
-      <div class="description-top">
-        Trusted by Bahrain's Leading Organizations
-      </div>
-      <div class="description-bottom">
-        Government • Banking • Healthcare • Education • Industry
-      </div>
-      <div class="sister-companies">
-        <img
-          src="https://via.placeholder.com/120x60/cccccc/666666?text=Gov+Bahrain"
-          alt="Government of Bahrain"
-        />
-        <img
-          src="https://via.placeholder.com/120x60/cccccc/666666?text=CBB"
-          alt="Central Bank of Bahrain"
-        />
-        <img
-          src="https://via.placeholder.com/120x60/cccccc/666666?text=BIC"
-          alt="Bahrain International Circuit"
-        />
-        <img
-          src="https://via.placeholder.com/120x60/cccccc/666666?text=Alba"
-          alt="Aluminum Bahrain"
-        />
-        <img
-          src="https://via.placeholder.com/120x60/cccccc/666666?text=UoB"
-          alt="University of Bahrain"
-        />
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Bahrain's Leading Network</h1>
+        <p class="hero-subtitle">Connecting Bahrain for Over 140 Years</p>
+        <p class="hero-description">
+          Experience the power of Bahrain's most trusted telecommunications
+          provider. From pioneering the first telephone service in 1981 to
+          leading the 5G revolution today, Batelco continues to set the
+          standard for connectivity excellence across the Kingdom.
+        </p>
       </div>
     </section>
 
-    <!-- Chat Support Button -->
-    <div class="chat-support" title="Need help? Chat with Basma!">
-      <img src="images/basma.png" alt="basma logo" />
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <button class="tab-btn active" onclick="switchTab('network', event)">
+        Network Excellence
+      </button>
+      <button class="tab-btn" onclick="switchTab('innovation', event)">
+        Innovation Leadership
+      </button>
+      <button class="tab-btn" onclick="switchTab('coverage', event)">
+        Coverage & Reliability
+      </button>
+      <button class="tab-btn" onclick="switchTab('success', event)">
+        Success Stories
+      </button>
     </div>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      // Tab switching functionality
-      function switchTab(tabName, event) {
-        // Hide all tab panes
-        const tabPanes = document.querySelectorAll('.tab-pane')
-        tabPanes.forEach((pane) => pane.classList.remove('active'))
+    <!-- Network Excellence Tab -->
+    <div class="tab-content">
+      <div id="network" class="tab-pane active">
+        <div class="content-section">
+          <h2>Network Excellence That Defines Bahrain</h2>
+          <p>
+            Batelco operates the most advanced and comprehensive
+            telecommunications network in Bahrain, delivering unmatched
+            performance and reliability to millions of customers across the
+            Kingdom.
+          </p>
+        </div>
 
-        // Remove active class from all tab buttons
-        const tabButtons = document.querySelectorAll('.tab-btn')
-        tabButtons.forEach((btn) => btn.classList.remove('active'))
+        <div class="services">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=5G" alt="5G Network" title="5G Network" />
+            </div>
+            <div class="service-content">
+              <h2>5G Network Leadership</h2>
+              <p>
+                First to launch commercial 5G services in Bahrain with
+                ultra-low latency and blazing-fast speeds up to 1.2 Gbps. Our
+                5G network covers 95% of populated areas with plans for
+                complete nationwide coverage.
+              </p>
+            </div>
+          </div>
 
-        // Show selected tab pane
-        document.getElementById(tabName).classList.add('active')
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=FIBER" alt="Fiber Network"
+                title="Fiber Network" />
+            </div>
+            <div class="service-content">
+              <h2>Fiber Infrastructure</h2>
+              <p>
+                Extensive fiber-optic network spanning over 5,000 kilometers
+                across Bahrain, providing lightning-fast internet speeds up to
+                1 Gbps for homes and businesses with 99.9% uptime guarantee.
+              </p>
+            </div>
+          </div>
 
-        // Add active class to clicked button
-        event.target.classList.add('active')
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=4G" alt="4G Coverage"
+                title="4G Coverage" />
+            </div>
+            <div class="service-content">
+              <h2>Superior 4G Coverage</h2>
+              <p>
+                Complete 4G LTE coverage across all of Bahrain with advanced
+                carrier aggregation technology, delivering consistent speeds
+                and seamless connectivity in urban and rural areas alike.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=CLOUD" alt="Cloud Services"
+                title="Cloud Services" />
+            </div>
+            <div class="service-content">
+              <h2>Cloud & Data Centers</h2>
+              <p>
+                State-of-the-art data centers with Tier III+ certification,
+                providing secure cloud services, disaster recovery, and
+                enterprise-grade hosting solutions with 24/7 monitoring and
+                support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="use-cases-grid">
+          <div class="use-case-card">
+            <h3>Network Performance</h3>
+            <p>
+              Consistently ranked #1 in Bahrain for network speed and
+              reliability by independent testing organizations, with average
+              download speeds 40% faster than competitors.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Infrastructure Investment</h3>
+            <p>
+              Over BD 200 million invested in network infrastructure upgrades
+              in the past 5 years, ensuring cutting-edge technology and
+              future-ready connectivity.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>International Connectivity</h3>
+            <p>
+              Multiple submarine cable systems connecting Bahrain to the
+              world, including direct links to Saudi Arabia, Kuwait, and major
+              international internet hubs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Innovation Leadership Tab -->
+      <div id="innovation" class="tab-pane">
+        <div class="content-section">
+          <h2>Innovation That Shapes Tomorrow</h2>
+          <p>
+            Batelco has been at the forefront of telecommunications
+            innovation, introducing groundbreaking technologies and services
+            that transform how Bahrain connects with the world.
+          </p>
+        </div>
+
+        <div class="services">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=IoT" alt="IoT Solutions"
+                title="IoT Solutions" />
+            </div>
+            <div class="service-content">
+              <h2>IoT & Smart City Solutions</h2>
+              <p>
+                Leading Bahrain's smart city transformation with comprehensive
+                IoT platforms, smart meters, traffic management systems, and
+                environmental monitoring solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=AI" alt="AI Technology"
+                title="AI Technology" />
+            </div>
+            <div class="service-content">
+              <h2>AI-Powered Services</h2>
+              <p>
+                Implementing artificial intelligence across our network for
+                predictive maintenance, automated customer service, and
+                intelligent traffic optimization for superior user experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=EDGE" alt="Edge Computing"
+                title="Edge Computing" />
+            </div>
+            <div class="service-content">
+              <h2>Edge Computing</h2>
+              <p>
+                Deployed edge computing nodes across Bahrain to reduce latency
+                for critical applications, supporting autonomous vehicles,
+                AR/VR, and real-time industrial applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/60x60/e94560/ffffff?text=SEC" alt="Cybersecurity"
+                title="Cybersecurity" />
+            </div>
+            <div class="service-content">
+              <h2>Advanced Cybersecurity</h2>
+              <p>
+                Comprehensive cybersecurity solutions including threat
+                detection, DDoS protection, and secure connectivity services,
+                protecting businesses and government entities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            First in Bahrain Achievements
+          </div>
+          <div class="faq-answer">
+            <p>
+              • First to launch 5G commercial services in Bahrain<br />
+              • First to provide 1 Gbps fiber internet to homes<br />
+              • First to implement VoLTE technology<br />
+              • First to launch comprehensive IoT platform<br />
+              • First to deploy AI-powered network optimization
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage & Reliability Tab -->
+      <div id="coverage" class="tab-pane">
+        <div class="content-section">
+          <h2>Unmatched Coverage & Reliability</h2>
+          <p>
+            Our network reaches every corner of Bahrain, ensuring reliable
+            connectivity for all residents and businesses, from Manama's
+            bustling city center to the most remote villages.
+          </p>
+        </div>
+
+        <div class="use-cases-grid">
+          <div class="use-case-card">
+            <h3>99.9% Network Uptime</h3>
+            <p>
+              Industry-leading reliability with redundant systems, automatic
+              failover, and 24/7 network monitoring ensuring minimal service
+              interruptions.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Complete Geographic Coverage</h3>
+            <p>
+              100% population coverage across all governorates in Bahrain,
+              including islands, industrial areas, and remote locations with
+              consistent service quality.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Disaster Recovery</h3>
+            <p>
+              Comprehensive disaster recovery and business continuity plans
+              with multiple data center locations and backup power systems
+              ensuring service during emergencies.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>24/7 Technical Support</h3>
+            <p>
+              Round-the-clock technical support with local expertise,
+              multilingual customer service, and dedicated account management
+              for enterprise customers.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Indoor Coverage Excellence</h3>
+            <p>
+              Advanced indoor coverage solutions including small cells, DAS
+              systems, and femtocells ensuring strong signal in buildings,
+              malls, and underground areas.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Rural Connectivity</h3>
+            <p>
+              Committed to bridging the digital divide with specialized rural
+              connectivity solutions ensuring high-speed internet access in
+              all areas of Bahrain.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2>Network Statistics</h2>
+          <div class="success-story">
+            <div class="story-layout">
+              <div class="story-text">
+                <h3>Network Performance Metrics</h3>
+                <p><strong>5G Coverage:</strong> 95% of populated areas</p>
+                <p><strong>4G Coverage:</strong> 100% nationwide</p>
+                <p><strong>Fiber Network:</strong> 5,000+ kilometers</p>
+                <p><strong>Data Centers:</strong> 3 Tier III+ facilities</p>
+                <p>
+                  <strong>International Gateways:</strong> 8 submarine cables
+                </p>
+                <p><strong>Network Uptime:</strong> 99.9% guaranteed</p>
+                <p>
+                  <strong>Customer Base:</strong> 2.5+ million subscribers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Stories Tab -->
+      <div id="success" class="tab-pane">
+        <div class="content-section">
+          <h2>Success Stories & Achievements</h2>
+          <p>
+            Our commitment to excellence has enabled countless success stories
+            across Bahrain, from supporting major government initiatives to
+            empowering small businesses with world-class connectivity.
+          </p>
+        </div>
+
+        <div class="success-story">
+          <div class="story-layout">
+            <div class="success-images">
+              <div class="image-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="https://via.placeholder.com/400x250/2d3142/ffffff?text=Government+Digital+Transformation"
+                      alt="Government Project" />
+                  </div>
+                  <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/400x250/e94560/ffffff?text=Smart+City+Bahrain"
+                      alt="Smart City" />
+                  </div>
+                  <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/400x250/2d3142/ffffff?text=5G+Network+Launch"
+                      alt="5G Launch" />
+                  </div>
+                </div>
+                <div class="carousel-indicators">
+                  <span class="indicator active" onclick="showSlide(0)"></span>
+                  <span class="indicator" onclick="showSlide(1)"></span>
+                  <span class="indicator" onclick="showSlide(2)"></span>
+                </div>
+              </div>
+            </div>
+            <div class="story-text">
+              <h3>Government Digital Transformation</h3>
+              <p>
+                Partnered with the Government of Bahrain to implement
+                comprehensive digital transformation initiatives, including
+                smart government services, digital ID systems, and secure
+                cloud infrastructure serving over 1.7 million citizens.
+              </p>
+              <p class="client">- Kingdom of Bahrain eGovernment Authority</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="success-story">
+          <h3>Banking Sector Digitalization</h3>
+          <p>
+            Provided critical infrastructure and cybersecurity solutions for
+            Bahrain's banking sector, enabling secure digital banking services
+            and supporting the Central Bank of Bahrain's open banking
+            initiatives.
+          </p>
+          <p class="client">
+            - Central Bank of Bahrain & Major Commercial Banks
+          </p>
+        </div>
+
+        <div class="success-story">
+          <h3>Bahrain International Circuit</h3>
+          <p>
+            Delivered ultra-high-speed connectivity and broadcast solutions
+            for Formula 1 Bahrain Grand Prix, enabling 4K live streaming and
+            real-time telemetry for teams, reaching millions of viewers
+            worldwide.
+          </p>
+          <p class="client">- Bahrain International Circuit</p>
+        </div>
+
+        <div class="success-story">
+          <h3>Industrial Sector Connectivity</h3>
+          <p>
+            Supported Bahrain's industrial sector with dedicated fiber
+            connections, IoT solutions, and cloud services, enabling Industry
+            4.0 transformation and increasing operational efficiency by 35%.
+          </p>
+          <p class="client">
+            - Aluminum Bahrain (Alba) & Industrial Partners
+          </p>
+        </div>
+
+        <div class="content-section">
+          <h2>Awards & Recognition</h2>
+          <div class="use-cases-grid">
+            <div class="use-case-card">
+              <h3>Telecom Company of the Year</h3>
+              <p>
+                Middle East Technology Excellence Awards 2024 - Recognized for
+                outstanding innovation and service excellence in
+                telecommunications.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <h3>Best 5G Network</h3>
+              <p>
+                GCC Telecom Awards 2024 - Honored for deploying the most
+                advanced 5G network infrastructure in the region.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <h3>Digital Transformation Leader</h3>
+              <p>
+                Bahrain Excellence Awards 2023 - Recognized for leading
+                digital transformation initiatives across the Kingdom.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <h3>Customer Service Excellence</h3>
+              <p>
+                Customer Satisfaction Index 2024 - Achieved 95% customer
+                satisfaction rating, highest in Bahrain's telecom sector.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#sister-companies" class="banner-button">See Our Partners</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sister Companies Section -->
+  <section id="sister-companies" class="sister-companies-section">
+    <div class="description-top">
+      Trusted by Bahrain's Leading Organizations
+    </div>
+    <div class="description-bottom">
+      Government • Banking • Healthcare • Education • Industry
+    </div>
+    <div class="sister-companies">
+      <img src="https://via.placeholder.com/120x60/cccccc/666666?text=Gov+Bahrain" alt="Government of Bahrain" />
+      <img src="https://via.placeholder.com/120x60/cccccc/666666?text=CBB" alt="Central Bank of Bahrain" />
+      <img src="https://via.placeholder.com/120x60/cccccc/666666?text=BIC" alt="Bahrain International Circuit" />
+      <img src="https://via.placeholder.com/120x60/cccccc/666666?text=Alba" alt="Aluminum Bahrain" />
+      <img src="https://via.placeholder.com/120x60/cccccc/666666?text=UoB" alt="University of Bahrain" />
+    </div>
+  </section>
+
+  <!-- Chat Support Button -->
+  <div class="chat-support" title="Need help? Chat with Basma!">
+    <img src="images/basma.png" alt="basma logo" />
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Tab switching functionality
+    function switchTab(tabName, event) {
+      // Hide all tab panes
+      const tabPanes = document.querySelectorAll('.tab-pane')
+      tabPanes.forEach((pane) => pane.classList.remove('active'))
+
+      // Remove active class from all tab buttons
+      const tabButtons = document.querySelectorAll('.tab-btn')
+      tabButtons.forEach((btn) => btn.classList.remove('active'))
+
+      // Show selected tab pane
+      document.getElementById(tabName).classList.add('active')
+
+      // Add active class to clicked button
+      event.target.classList.add('active')
+    }
+
+    // FAQ toggle functionality
+    function toggleFaq(element) {
+      const faqItem = element.parentElement
+      faqItem.classList.toggle('active')
+    }
+
+    let currentLang = 'en'
+    const originalTexts = {}
+    let translations = {}
+
+    const families = [
+      {
+        key: 'security',
+        icon: 'shield-check',
+        subItems: [{ key: 'managed_firewall' }]
+      },
+      {
+        key: 'smart_solutions',
+        icon: 'sparkles',
+        subItems: [
+          { key: 'managed_wifi' },
+          { key: 'smart_board' },
+          { key: 'digital_screen' },
+          { key: 'elv' },
+          { key: 'home_automation' },
+          { key: 'fleet_management' }
+        ]
+      },
+      {
+        key: 'messaging',
+        icon: 'message-circle',
+        subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
+      },
+      {
+        key: 'hosting',
+        icon: 'database',
+        subItems: [
+          { key: 'email' },
+          { key: 'datacenter' },
+          { key: 'continuity' }
+        ]
+      },
+      {
+        key: 'connectivity',
+        icon: 'wifi',
+        subItems: [
+          { key: 'fiber_broadband' },
+          { key: 'ipvpn' },
+          { key: 'sdwan' }
+        ]
+      },
+      {
+        key: 'voice',
+        icon: 'phone',
+        subItems: [
+          { key: 'unified_comm' },
+          { key: 'cloud_uc' },
+          { key: 'fixed_voice' },
+          { key: 'isdn' }
+        ]
+      },
+      {
+        key: 'mobile',
+        icon: 'smartphone',
+        subItems: [{ key: 'postpaid' }, { key: 'broadband' }, { key: 'm2m' }]
       }
+    ]
 
-      // FAQ toggle functionality
-      function toggleFaq(element) {
-        const faqItem = element.parentElement
-        faqItem.classList.toggle('active')
-      }
+    const familiesList = document.getElementById('families')
+    const subItemsList = document.getElementById('subItems')
+    const productsTab = document.getElementById('productsTab')
+    const productDropdown = document.getElementById('productDropdown')
 
-      let currentLang = 'en'
-      const originalTexts = {}
-      let translations = {}
+    // 🔍 Search icon
+    document.getElementById('searchIcon')?.addEventListener('click', () => {
+      window.location.href = 'search.html'
+    })
 
-      const families = [
-        {
-          key: 'security',
-          icon: 'shield-check',
-          subItems: [{ key: 'managed_firewall' }]
-        },
-        {
-          key: 'smart_solutions',
-          icon: 'sparkles',
-          subItems: [
-            { key: 'managed_wifi' },
-            { key: 'smart_board' },
-            { key: 'digital_screen' },
-            { key: 'elv' },
-            { key: 'home_automation' },
-            { key: 'fleet_management' }
-          ]
-        },
-        {
-          key: 'messaging',
-          icon: 'message-circle',
-          subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
-        },
-        {
-          key: 'hosting',
-          icon: 'database',
-          subItems: [
-            { key: 'email' },
-            { key: 'datacenter' },
-            { key: 'continuity' }
-          ]
-        },
-        {
-          key: 'connectivity',
-          icon: 'wifi',
-          subItems: [
-            { key: 'fiber_broadband' },
-            { key: 'ipvpn' },
-            { key: 'sdwan' }
-          ]
-        },
-        {
-          key: 'voice',
-          icon: 'phone',
-          subItems: [
-            { key: 'unified_comm' },
-            { key: 'cloud_uc' },
-            { key: 'fixed_voice' },
-            { key: 'isdn' }
-          ]
-        },
-        {
-          key: 'mobile',
-          icon: 'smartphone',
-          subItems: [{ key: 'postpaid' }, { key: 'broadband' }, { key: 'm2m' }]
-        }
-      ]
-
-      const familiesList = document.getElementById('families')
-      const subItemsList = document.getElementById('subItems')
-      const productsTab = document.getElementById('productsTab')
-      const productDropdown = document.getElementById('productDropdown')
-
-      // 🔍 Search icon
-      document.getElementById('searchIcon')?.addEventListener('click', () => {
-        window.location.href = 'search.html'
+    // 🧠 Save original English content
+    function cacheOriginalText() {
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n')
+        originalTexts[key] = el.innerHTML
       })
+    }
 
-      // 🧠 Save original English content
-      function cacheOriginalText() {
-        document.querySelectorAll('[data-i18n]').forEach((el) => {
-          const key = el.getAttribute('data-i18n')
-          originalTexts[key] = el.innerHTML
-        })
-      }
-
-      // 📦 Render dropdown categories
-      function renderFamilies() {
-        familiesList.innerHTML = families
-          .map(
-            (fam, idx) => `
+    // 📦 Render dropdown categories
+    function renderFamilies() {
+      familiesList.innerHTML = families
+        .map(
+          (fam, idx) => `
         <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
           <i data-lucide="${fam.icon}"></i> ${translations[fam.key] || fam.key}
         </li>
       `
-          )
-          .join('')
-        lucide.createIcons()
-      }
+        )
+        .join('')
+      lucide.createIcons()
+    }
 
-      // 🧩 Render subitems when hovering a category
-      function renderSubItems(idx) {
-        subItemsList.innerHTML = families[idx].subItems
-          .map(
-            (sub) =>
-              `<div class="subitem">${translations[sub.key] || sub.key}</div>`
-          )
-          .join('')
-      }
+    // 🧩 Render subitems when hovering a category
+    function renderSubItems(idx) {
+      subItemsList.innerHTML = families[idx].subItems
+        .map(
+          (sub) =>
+            `<div class="subitem">${translations[sub.key] || sub.key}</div>`
+        )
+        .join('')
+    }
 
-      // 🌐 Language switcher
-      async function setLanguage(lang) {
-        if (lang === 'ar') {
-          try {
-            const response = await fetch('./locales/ar.json')
-            translations = await response.json()
+    // 🌐 Language switcher
+    async function setLanguage(lang) {
+      if (lang === 'ar') {
+        try {
+          const response = await fetch('./locales/ar.json')
+          translations = await response.json()
 
-            document.documentElement.lang = 'ar'
-            document.documentElement.dir = 'rtl'
-            document.body.style.fontFamily = "'Cairo', sans-serif"
-
-            document.querySelectorAll('[data-i18n]').forEach((el) => {
-              const key = el.getAttribute('data-i18n')
-              const html = translations[key]
-              if (html) el.innerHTML = html
-            })
-
-            renderFamilies()
-            document.getElementById('lang-btn').textContent = 'English'
-          } catch (err) {
-            console.error('Failed to load Arabic translations:', err)
-          }
-        } else {
-          translations = {} // clear translations
-
-          document.documentElement.lang = 'en'
-          document.documentElement.dir = 'ltr'
-          document.body.style.fontFamily =
-            "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          document.documentElement.lang = 'ar'
+          document.documentElement.dir = 'rtl'
+          document.body.style.fontFamily = "'Cairo', sans-serif"
 
           document.querySelectorAll('[data-i18n]').forEach((el) => {
             const key = el.getAttribute('data-i18n')
-            if (originalTexts[key]) {
-              el.innerHTML = originalTexts[key]
-            }
+            const html = translations[key]
+            if (html) el.innerHTML = html
           })
 
           renderFamilies()
-          document.getElementById('lang-btn').textContent = 'عربي'
+          document.getElementById('lang-btn').textContent = 'English'
+        } catch (err) {
+          console.error('Failed to load Arabic translations:', err)
         }
+      } else {
+        translations = {} // clear translations
 
-        currentLang = lang
-      }
+        document.documentElement.lang = 'en'
+        document.documentElement.dir = 'ltr'
+        document.body.style.fontFamily =
+          "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
 
-      function toggleLanguage() {
-        const newLang = currentLang === 'en' ? 'ar' : 'en'
-        setLanguage(newLang)
-      }
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n')
+          if (originalTexts[key]) {
+            el.innerHTML = originalTexts[key]
+          }
+        })
 
-      // 🎬 Initialize on page load
-      window.addEventListener('DOMContentLoaded', () => {
-        cacheOriginalText()
-        setLanguage(currentLang)
         renderFamilies()
+        document.getElementById('lang-btn').textContent = 'عربي'
+      }
 
-        productsTab?.addEventListener('mouseenter', () => {
-          productDropdown.classList.remove('hidden')
-        })
-        productDropdown?.addEventListener('mouseleave', () => {
-          productDropdown.classList.add('hidden')
-        })
+      currentLang = lang
+    }
+
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ar' : 'en'
+      setLanguage(newLang)
+    }
+
+    // 🎬 Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      cacheOriginalText()
+      setLanguage(currentLang)
+      renderFamilies()
+
+      productsTab?.addEventListener('mouseenter', () => {
+        productDropdown.classList.remove('hidden')
       })
-    </script>
-  </body>
+      productDropdown?.addEventListener('mouseleave', () => {
+        productDropdown.classList.add('hidden')
+      })
+    })
+  </script>
+</body>
+
 </html>

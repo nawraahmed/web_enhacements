@@ -1,304 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Onboarding</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link
-      href="https://unpkg.com/lucide@latest/dist/lucide.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-      <div class="top-nav-links">
-        <a href="#">Personal</a>
-        <a href="#" class="active">Business</a>
-        <a href="#">Global</a>
-        <a href="#">About Us</a>
-      </div>
-      <div class="top-nav-utility">
-        <a href="#">Support</a>
-        <a href="#">My Account</a>
-        <a href="#">Quick pay</a>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Onboarding</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://unpkg.com/lucide@latest/dist/lucide.css" rel="stylesheet" />
+</head>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-      <div class="logo">
-        <img src="images/batelco_logo.png" alt="Batelco Logo" />
-      </div>
-      <div class="main-nav-links">
-        <a href="landing_page.html" data-i18n="home">Home</a>
-
-        <div class="dropdown-container">
-          <a href="new_ui.html" id="productsTab" data-i18n="products"
-            >Products</a
-          >
-          <div id="productDropdown" class="dropdown hidden">
-            <ul id="families" class="dropdown-families"></ul>
-            <div id="subItems" class="dropdown-subitems"></div>
-          </div>
-        </div>
-        <a href="#" data-i18n="latest_offers">Latest Offers</a>
-        <a href="business_onboarding.html" data-i18n="onboarding"
-          >Business Onboarding</a
-        >
-        <a href="#" data-i18n="business_support">Business Support</a>
-        <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
-      </div>
-      <div class="search-icon" id="searchIcon">🔍</div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="text-center">
-      <h2 class="page-title">Tailor Your Business Solution</h2>
-      <button id="startQuiz" class="nav-btn">Start Quiz</button>
-      <div id="recommendations" class="recommendations hidden"></div>
-    </main>
-
-    <!-- Quiz Modal -->
-    <div id="quizModal" class="quiz-modal hidden">
-      <div class="quiz-content">
-        <h3 id="quizTitle">Tailor Your Solution</h3>
-        <div id="quizBody"></div>
-        <button id="closeQuiz" class="view-more-btn">Close</button>
-      </div>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-links">
+      <a href="#">Personal</a>
+      <a href="#" class="active">Business</a>
+      <a href="#">Global</a>
+      <a href="#">About Us</a>
     </div>
+    <div class="top-nav-utility">
+      <a href="#">Support</a>
+      <a href="#">My Account</a>
+      <a href="#">Quick pay</a>
+    </div>
+  </nav>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      document
-        .getElementById('searchIcon')
-        .addEventListener('click', function () {
-          window.location.href = 'search.html'
-        })
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="logo">
+      <img src="images/batelco_logo.png" alt="Batelco Logo" />
+    </div>
+    <div class="main-nav-links">
+      <a href="landing_page.html" data-i18n="home">Home</a>
 
-      const productsTab = document.getElementById('productsTab')
-      const productDropdown = document.getElementById('productDropdown')
-      const familiesList = document.getElementById('families')
-      const subItemsList = document.getElementById('subItems')
-      const startQuizBtn = document.getElementById('startQuiz')
-      const quizModal = document.getElementById('quizModal')
-      const quizBody = document.getElementById('quizBody')
-      const closeQuizBtn = document.getElementById('closeQuiz')
-      const recommendationsContainer =
-        document.getElementById('recommendations')
+      <div class="dropdown-container">
+       <a href="index.html" id="productsTab" data-i18n="products">Products</a>
+        <div id="productDropdown" class="dropdown hidden">
+          <ul id="families" class="dropdown-families"></ul>
+          <div id="subItems" class="dropdown-subitems"></div>
+        </div>
+      </div>
+      <a href="#" data-i18n="latest_offers">Latest Offers</a>
+      <a href="business_onboarding.html" data-i18n="onboarding">Business Onboarding</a>
+      <a href="#" data-i18n="business_support">Business Support</a>
+      <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
+    </div>
+    <div class="search-icon" id="searchIcon">🔍</div>
+  </nav>
 
-      // Sample product data
-      const families = [
-        {
-          title: 'Security',
-          icon: 'shield-check',
-          subItems: [{ name: 'Managed Firewall' }]
-        },
-        {
-          title: 'Smart Solutions',
-          icon: 'sparkles',
-          subItems: [
-            { name: 'Managed Wifi' },
-            { name: 'Interactive Smart Board' },
-            { name: 'Digital Screen' },
-            { name: 'ELV' },
-            { name: 'Home Automation' },
-            { name: 'Fleet Management' }
-          ]
-        },
-        {
-          title: 'Messaging',
-          icon: 'message-circle',
-          subItems: [{ name: 'Telegram' }, { name: 'Bulk SMS' }]
-        },
-        {
-          title: 'Hosting',
-          icon: 'database',
-          subItems: [
-            { name: 'Email' },
-            { name: 'Datacenter Colocation' },
-            { name: 'Business Continuity' }
-          ]
-        },
-        {
-          title: 'Connectivity & Internet',
-          icon: 'wifi',
-          subItems: [
-            { name: 'Fiber Broadband' },
-            { name: 'IPVPN/MPLS' },
-            { name: 'SD-WAN' }
-          ]
-        },
-        {
-          title: 'Voice Communication',
-          icon: 'phone',
-          subItems: [
-            { name: 'Unified Communication' },
-            { name: 'Cloud UC' },
-            { name: 'Fixed Voice' },
-            { name: 'ISDN, PSTN, SIP' }
-          ]
-        },
-        {
-          title: 'Mobile',
-          icon: 'smartphone',
-          subItems: [
-            { name: 'Business Postpaid' },
-            { name: 'Business Broadband' },
-            { name: 'Business M2M' }
-          ]
-        }
-      ]
+  <!-- Main Content -->
+  <main class="text-center">
+    <h2 class="page-title">Tailor Your Business Solution</h2>
+    <button id="startQuiz" class="nav-btn">Start Quiz</button>
+    <div id="recommendations" class="recommendations hidden"></div>
+  </main>
 
-      // Dropdown functionality
-      productsTab.addEventListener('mouseenter', () => {
-        productDropdown.classList.remove('hidden')
+  <!-- Quiz Modal -->
+  <div id="quizModal" class="quiz-modal hidden">
+    <div class="quiz-content">
+      <h3 id="quizTitle">Tailor Your Solution</h3>
+      <div id="quizBody"></div>
+      <button id="closeQuiz" class="view-more-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document
+      .getElementById('searchIcon')
+      .addEventListener('click', function () {
+        window.location.href = 'search.html'
       })
 
-      productDropdown.addEventListener('mouseleave', () => {
-        productDropdown.classList.add('hidden')
-      })
+    const productsTab = document.getElementById('productsTab')
+    const productDropdown = document.getElementById('productDropdown')
+    const familiesList = document.getElementById('families')
+    const subItemsList = document.getElementById('subItems')
+    const startQuizBtn = document.getElementById('startQuiz')
+    const quizModal = document.getElementById('quizModal')
+    const quizBody = document.getElementById('quizBody')
+    const closeQuizBtn = document.getElementById('closeQuiz')
+    const recommendationsContainer =
+      document.getElementById('recommendations')
 
-      function renderFamilies() {
-        familiesList.innerHTML = families
-          .map(
-            (fam, idx) => `
+    // Sample product data
+    const families = [
+      {
+        title: 'Security',
+        icon: 'shield-check',
+        subItems: [{ name: 'Managed Firewall' }]
+      },
+      {
+        title: 'Smart Solutions',
+        icon: 'sparkles',
+        subItems: [
+          { name: 'Managed Wifi' },
+          { name: 'Interactive Smart Board' },
+          { name: 'Digital Screen' },
+          { name: 'ELV' },
+          { name: 'Home Automation' },
+          { name: 'Fleet Management' }
+        ]
+      },
+      {
+        title: 'Messaging',
+        icon: 'message-circle',
+        subItems: [{ name: 'Telegram' }, { name: 'Bulk SMS' }]
+      },
+      {
+        title: 'Hosting',
+        icon: 'database',
+        subItems: [
+          { name: 'Email' },
+          { name: 'Datacenter Colocation' },
+          { name: 'Business Continuity' }
+        ]
+      },
+      {
+        title: 'Connectivity & Internet',
+        icon: 'wifi',
+        subItems: [
+          { name: 'Fiber Broadband' },
+          { name: 'IPVPN/MPLS' },
+          { name: 'SD-WAN' }
+        ]
+      },
+      {
+        title: 'Voice Communication',
+        icon: 'phone',
+        subItems: [
+          { name: 'Unified Communication' },
+          { name: 'Cloud UC' },
+          { name: 'Fixed Voice' },
+          { name: 'ISDN, PSTN, SIP' }
+        ]
+      },
+      {
+        title: 'Mobile',
+        icon: 'smartphone',
+        subItems: [
+          { name: 'Business Postpaid' },
+          { name: 'Business Broadband' },
+          { name: 'Business M2M' }
+        ]
+      }
+    ]
+
+    // Dropdown functionality
+    productsTab.addEventListener('mouseenter', () => {
+      productDropdown.classList.remove('hidden')
+    })
+
+    productDropdown.addEventListener('mouseleave', () => {
+      productDropdown.classList.add('hidden')
+    })
+
+    function renderFamilies() {
+      familiesList.innerHTML = families
+        .map(
+          (fam, idx) => `
                 <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
                     <i data-lucide="${fam.icon}"></i> ${fam.title}
                 </li>
             `
-          )
-          .join('')
-        lucide.createIcons()
-      }
+        )
+        .join('')
+      lucide.createIcons()
+    }
 
-      function renderSubItems(idx) {
-        subItemsList.innerHTML = families[idx].subItems
-          .map(
-            (sub) => `
+    function renderSubItems(idx) {
+      subItemsList.innerHTML = families[idx].subItems
+        .map(
+          (sub) => `
                 <div class="subitem">${sub.name}</div>
             `
-          )
-          .join('')
+        )
+        .join('')
+    }
+
+    renderFamilies()
+
+    // Quiz functionality
+    let quizStep = 0
+    let answers = {}
+
+    const questions = [
+      {
+        question: 'What is your primary business goal?',
+        options: [
+          'Enhance internet connectivity',
+          'Strengthen data security',
+          'Transition to cloud solutions',
+          'Support remote workforce',
+          'Improve customer communication'
+        ]
+      },
+      {
+        question: 'What is your company size?',
+        options: [
+          '1–10 employees',
+          '11–50 employees',
+          '51–200 employees',
+          'Over 200 employees'
+        ]
+      },
+      {
+        question: 'Do employees work remotely?',
+        options: ['Yes, all', 'Yes, some', 'No']
+      },
+      {
+        question: "What's important for your business?",
+        options: ['Data security', 'Flexibility', 'Both equally']
       }
+    ]
 
-      renderFamilies()
+    const productRecommendations = {
+      'Enhance internet connectivity': ['Fiber Broadband', 'SD-WAN'],
+      'Strengthen data security': ['Managed Firewall', 'Business Continuity'],
+      'Transition to cloud solutions': [
+        'Cloud UC',
+        'Email',
+        'Datacenter Colocation'
+      ],
+      'Support remote workforce': [
+        'Business Broadband',
+        'Cloud UC',
+        'Unified Communication'
+      ],
+      'Improve customer communication': ['Bulk SMS', 'Telegram']
+    }
 
-      // Quiz functionality
-      let quizStep = 0
-      let answers = {}
-
-      const questions = [
-        {
-          question: 'What is your primary business goal?',
-          options: [
-            'Enhance internet connectivity',
-            'Strengthen data security',
-            'Transition to cloud solutions',
-            'Support remote workforce',
-            'Improve customer communication'
-          ]
-        },
-        {
-          question: 'What is your company size?',
-          options: [
-            '1–10 employees',
-            '11–50 employees',
-            '51–200 employees',
-            'Over 200 employees'
-          ]
-        },
-        {
-          question: 'Do employees work remotely?',
-          options: ['Yes, all', 'Yes, some', 'No']
-        },
-        {
-          question: "What's important for your business?",
-          options: ['Data security', 'Flexibility', 'Both equally']
-        }
-      ]
-
-      const productRecommendations = {
-        'Enhance internet connectivity': ['Fiber Broadband', 'SD-WAN'],
-        'Strengthen data security': ['Managed Firewall', 'Business Continuity'],
-        'Transition to cloud solutions': [
-          'Cloud UC',
-          'Email',
-          'Datacenter Colocation'
-        ],
-        'Support remote workforce': [
-          'Business Broadband',
-          'Cloud UC',
-          'Unified Communication'
-        ],
-        'Improve customer communication': ['Bulk SMS', 'Telegram']
-      }
-
-      function renderQuiz() {
-        quizBody.innerHTML = `<p>${questions[quizStep].question}</p>`
-        questions[quizStep].options.forEach((option) => {
-          const btn = document.createElement('div')
-          btn.className = 'quiz-option'
-          btn.textContent = option
-          btn.onclick = () => {
-            answers[quizStep] = option
-            if (quizStep < questions.length - 1) {
-              quizStep++
-              renderQuiz()
-            } else {
-              showRecommendations()
-              quizModal.classList.add('hidden')
-              quizStep = 0
-              answers = {}
-            }
+    function renderQuiz() {
+      quizBody.innerHTML = `<p>${questions[quizStep].question}</p>`
+      questions[quizStep].options.forEach((option) => {
+        const btn = document.createElement('div')
+        btn.className = 'quiz-option'
+        btn.textContent = option
+        btn.onclick = () => {
+          answers[quizStep] = option
+          if (quizStep < questions.length - 1) {
+            quizStep++
+            renderQuiz()
+          } else {
+            showRecommendations()
+            quizModal.classList.add('hidden')
+            quizStep = 0
+            answers = {}
           }
-          quizBody.appendChild(btn)
-        })
-      }
-
-      function showRecommendations() {
-        // Clear previous content and remove hidden class
-        recommendationsContainer.innerHTML = ''
-        recommendationsContainer.classList.remove('hidden')
-
-        // Add title
-        const title = document.createElement('h3')
-        title.textContent = 'Recommended Services:'
-        recommendationsContainer.appendChild(title)
-
-        // Get recommendations based on first answer
-        const recs = productRecommendations[answers[0]] || []
-
-        // Add each recommendation
-        recs.forEach((rec) => {
-          const div = document.createElement('div')
-          div.className = 'recommendation'
-          div.textContent = rec
-          recommendationsContainer.appendChild(div)
-        })
-
-        // If no recommendations found, show a default message
-        if (recs.length === 0) {
-          const div = document.createElement('div')
-          div.className = 'recommendation'
-          div.textContent =
-            'Contact our business team for personalized recommendations'
-          recommendationsContainer.appendChild(div)
         }
-      }
+        quizBody.appendChild(btn)
+      })
+    }
 
-      startQuizBtn.onclick = () => {
-        // Hide recommendations when starting new quiz
-        recommendationsContainer.classList.add('hidden')
-        quizModal.classList.remove('hidden')
-        renderQuiz()
-      }
+    function showRecommendations() {
+      // Clear previous content and remove hidden class
+      recommendationsContainer.innerHTML = ''
+      recommendationsContainer.classList.remove('hidden')
 
-      closeQuizBtn.onclick = () => {
-        quizModal.classList.add('hidden')
+      // Add title
+      const title = document.createElement('h3')
+      title.textContent = 'Recommended Services:'
+      recommendationsContainer.appendChild(title)
+
+      // Get recommendations based on first answer
+      const recs = productRecommendations[answers[0]] || []
+
+      // Add each recommendation
+      recs.forEach((rec) => {
+        const div = document.createElement('div')
+        div.className = 'recommendation'
+        div.textContent = rec
+        recommendationsContainer.appendChild(div)
+      })
+
+      // If no recommendations found, show a default message
+      if (recs.length === 0) {
+        const div = document.createElement('div')
+        div.className = 'recommendation'
+        div.textContent =
+          'Contact our business team for personalized recommendations'
+        recommendationsContainer.appendChild(div)
       }
-    </script>
-  </body>
+    }
+
+    startQuizBtn.onclick = () => {
+      // Hide recommendations when starting new quiz
+      recommendationsContainer.classList.add('hidden')
+      quizModal.classList.remove('hidden')
+      renderQuiz()
+    }
+
+    closeQuizBtn.onclick = () => {
+      quizModal.classList.add('hidden')
+    }
+  </script>
+</body>
+
 </html>
