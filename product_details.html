@@ -29,6 +29,8 @@
         <img src="images/batelco_logo.png" alt="Batelco Logo" />
       </div>
       <div class="main-nav-links">
+        <a href="landing_page.html" data-i18n="home">Home</a>
+
         <div class="dropdown-container">
           <a href="new_ui.html" id="productsTab" data-i18n="products"
             >Products</a
@@ -43,7 +45,7 @@
           >Business Onboarding</a
         >
         <a href="#" data-i18n="business_support">Business Support</a>
-        <a href="#" data-i18n="why_us">Why Batelco</a>
+        <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
       </div>
       <div class="search-icon" id="searchIcon">🔍</div>
     </nav>
@@ -290,7 +292,169 @@
       </div>
     </main>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
+      let currentLang = 'en'
+      const originalTexts = {}
+      let translations = {}
+
+      const families = [
+        {
+          key: 'security',
+          icon: 'shield-check',
+          subItems: [{ key: 'managed_firewall' }]
+        },
+        {
+          key: 'smart_solutions',
+          icon: 'sparkles',
+          subItems: [
+            { key: 'managed_wifi' },
+            { key: 'smart_board' },
+            { key: 'digital_screen' },
+            { key: 'elv' },
+            { key: 'home_automation' },
+            { key: 'fleet_management' }
+          ]
+        },
+        {
+          key: 'messaging',
+          icon: 'message-circle',
+          subItems: [{ key: 'telegram' }, { key: 'bulk_sms' }]
+        },
+        {
+          key: 'hosting',
+          icon: 'database',
+          subItems: [
+            { key: 'email' },
+            { key: 'datacenter' },
+            { key: 'continuity' }
+          ]
+        },
+        {
+          key: 'connectivity',
+          icon: 'wifi',
+          subItems: [
+            { key: 'fiber_broadband' },
+            { key: 'ipvpn' },
+            { key: 'sdwan' }
+          ]
+        },
+        {
+          key: 'voice',
+          icon: 'phone',
+          subItems: [
+            { key: 'unified_comm' },
+            { key: 'cloud_uc' },
+            { key: 'fixed_voice' },
+            { key: 'isdn' }
+          ]
+        },
+        {
+          key: 'mobile',
+          icon: 'smartphone',
+          subItems: [{ key: 'postpaid' }, { key: 'broadband' }, { key: 'm2m' }]
+        }
+      ]
+
+      const familiesList = document.getElementById('families')
+      const subItemsList = document.getElementById('subItems')
+      const productsTab = document.getElementById('productsTab')
+      const productDropdown = document.getElementById('productDropdown')
+
+      // 🔍 Search icon
+      document.getElementById('searchIcon')?.addEventListener('click', () => {
+        window.location.href = 'search.html'
+      })
+
+      // 🧠 Save original English content
+      function cacheOriginalText() {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n')
+          originalTexts[key] = el.innerHTML
+        })
+      }
+
+      // 📦 Render dropdown categories
+      function renderFamilies() {
+        familiesList.innerHTML = families
+          .map(
+            (fam, idx) => `
+        <li class="dropdown-item" onmouseenter="renderSubItems(${idx})">
+          <i data-lucide="${fam.icon}"></i> ${translations[fam.key] || fam.key}
+        </li>
+      `
+          )
+          .join('')
+        lucide.createIcons()
+      }
+
+      // 🧩 Render subitems when hovering a category
+      function renderSubItems(idx) {
+        subItemsList.innerHTML = families[idx].subItems
+          .map(
+            (sub) =>
+              `<div class="subitem">${translations[sub.key] || sub.key}</div>`
+          )
+          .join('')
+      }
+
+      // 🌐 Language switcher
+      async function setLanguage(lang) {
+        if (lang === 'ar') {
+          try {
+            const response = await fetch('./locales/ar.json')
+            translations = await response.json()
+
+            document.documentElement.lang = 'ar'
+            document.documentElement.dir = 'rtl'
+            document.body.style.fontFamily = "'Cairo', sans-serif"
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+              const key = el.getAttribute('data-i18n')
+              const html = translations[key]
+              if (html) el.innerHTML = html
+            })
+
+            renderFamilies()
+            document.getElementById('lang-btn').textContent = 'English'
+          } catch (err) {
+            console.error('Failed to load Arabic translations:', err)
+          }
+        } else {
+          translations = {} // clear translations
+
+          document.documentElement.lang = 'en'
+          document.documentElement.dir = 'ltr'
+          document.body.style.fontFamily =
+            "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+
+          document.querySelectorAll('[data-i18n]').forEach((el) => {
+            const key = el.getAttribute('data-i18n')
+            if (originalTexts[key]) {
+              el.innerHTML = originalTexts[key]
+            }
+          })
+
+          renderFamilies()
+          document.getElementById('lang-btn').textContent = 'عربي'
+        }
+
+        currentLang = lang
+      }
+
+      function toggleLanguage() {
+        const newLang = currentLang === 'en' ? 'ar' : 'en'
+        setLanguage(newLang)
+      }
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index)
+          dots[i].classList.toggle('active', i === index)
+        })
+        currentSlideIndex = index
+      }
+
       // Tab functionality
       const tabBtns = document.querySelectorAll('.tab-btn')
       const tabPanes = document.querySelectorAll('.tab-pane')
@@ -388,6 +552,20 @@
       }
 
       initializeCarousel()
+
+      // 🎬 Initialize on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        cacheOriginalText()
+        setLanguage(currentLang)
+        renderFamilies()
+
+        productsTab?.addEventListener('mouseenter', () => {
+          productDropdown.classList.remove('hidden')
+        })
+        productDropdown?.addEventListener('mouseleave', () => {
+          productDropdown.classList.add('hidden')
+        })
+      })
     </script>
   </body>
 </html>

@@ -33,17 +33,23 @@
       <img src="images/batelco_logo.png" alt="Batelco Logo" />
     </div>
     <div class="main-nav-links">
+      <a href="landing_page.html" data-i18n="home">Home</a>
+
       <div class="dropdown-container">
-        <a href="new_ui.html" id="productsTab" data-i18n="products">Products</a>
+        <a href="new_ui.html" id="productsTab" data-i18n="products"
+          >Products</a
+        >
         <div id="productDropdown" class="dropdown hidden">
           <ul id="families" class="dropdown-families"></ul>
           <div id="subItems" class="dropdown-subitems"></div>
         </div>
       </div>
       <a href="#" data-i18n="latest_offers">Latest Offers</a>
-      <a href="business_onboarding.html" data-i18n="onboarding">Business Onboarding</a>
+      <a href="business_onboarding.html" data-i18n="onboarding"
+        >Business Onboarding</a
+      >
       <a href="#" data-i18n="business_support">Business Support</a>
-      <a href="#" data-i18n="why_us">Why Batelco</a>
+      <a href="why_batelco.html" data-i18n="why_batelco">Why Batelco</a>
     </div>
     <div class="search-icon" id="searchIcon">🔍</div>
   </nav>
@@ -238,11 +244,12 @@
   </section>
 
   <!-- Chat Support Button -->
-  <div class="chat-support">
+  <div class="chat-support" title="Need help? Chat with Basma!">
     <img src="images/basma.png" alt="basma logo" />
   </div>
 
   <script src="https://unpkg.com/lucide@latest"></script>
+  
   <script>
     let currentLang = 'en';
     const originalTexts = {};
