@@ -254,8 +254,10 @@
 
   <!-- Chat Support Button -->
   <div class="chat-support" title="Need help? Chat with Basma!">
-    <img src="images/basma.png" alt="basma logo" />
+    <img src="images/basma.png" alt="Basma logo" />
   </div>
+
+
 
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -465,6 +467,9 @@
     }
 
     setInterval(autoSlide, 5000); // Change slide every 5 seconds
+    document.querySelector('.chat-support').addEventListener('click', () => {
+      window.location.href = 'Basma/basma1.0.html';
+    });
   </script>
 </body>
 

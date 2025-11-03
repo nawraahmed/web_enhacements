@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batelco — Chat with Basma (UI Only)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app" role="application" aria-label="Batelco Chat UI">
+    <header class="topbar">
+      <div class="brand" aria-hidden="true">
+        <div class="avatar bot" aria-hidden="true">
+          <img src="batelco_logo.png" alt="Batelco logo" />
+        </div>
+        <div class="brand-title">Batelco <span class="brand-sub">by Beyon</span></div>
+      </div>
+      <div class="title" id="chatTitle">Chat with Basma</div>
+      <div class="actions">
+        <div class="seg" role="group" aria-label="Language">
+          <button id="btnEn" aria-pressed="true">EN</button>
+          <button id="btnAr" aria-pressed="false">AR</button>
+        </div>
+        <button class="icon-btn" aria-label="Open chat menu" title="Menu">⋯</button>
+        <button class="icon-btn" aria-label="Close chat" title="Close">✕</button>
+      </div>
+    </header>
+
+    <main class="chat" aria-live="polite">
+      <div class="scroll" id="scroll">
+        <div class="timeline" id="timeline">
+          <!-- Seed conversation -->
+          <section class="msg bot" aria-label="Basma message">
+            <div class="avatar bot" aria-hidden="true">
+              <img src="basma.png" alt="Basma avatar" />
+            </div>
+            <div>
+              <div class="bubble">
+                <p><strong id="greet">Good evening Hosam!</strong> <span id="intro">You can select one of the suggested
+                    topics below to start a new chat or ask any other question.</span></p>
+                <div class="chips" id="chips">
+                  <button class="chip" data-text="Renew CPR">Renew CPR</button>
+                  <button class="chip" data-text="Pay traffic fines">Pay Traffic Fines</button>
+                  <button class="chip" data-text="Pay EWA bill">Pay EWA Bill</button>
+                  <button class="chip" data-text="Book NPRA appointment">Book NPRA Appointment</button>
+                </div>
+
+
+              </div>
+              <div class="time">05:03 PM 25/10/2025</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <form class="composer" id="composer" autocomplete="off" aria-label="Message composer">
+      <div class="input-wrap">
+        <div class="globe" aria-hidden="true">🌐</div>
+        <input id="input" class="chat-input" type="text" placeholder="Ask me anything" aria-label="Type your message" />
+      </div>
+      <button class="send-btn" type="submit" aria-label="Send message" id="sendBtn">➤</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
