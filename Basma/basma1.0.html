@@ -10,6 +10,7 @@
 
 <body>
   <div class="app" role="application" aria-label="Batelco Chat UI">
+    <!-- Top bar -->
     <header class="topbar">
       <div class="brand" aria-hidden="true">
         <div class="avatar bot" aria-hidden="true">
@@ -17,17 +18,35 @@
         </div>
         <div class="brand-title">Batelco <span class="brand-sub">by Beyon</span></div>
       </div>
-      <div class="title" id="chatTitle">Chat with Basma</div>
+
+      <div class="title" id="chatTitle">eGov Basma</div>
+
       <div class="actions">
         <div class="seg" role="group" aria-label="Language">
           <button id="btnEn" aria-pressed="true">EN</button>
           <button id="btnAr" aria-pressed="false">AR</button>
         </div>
-        <button class="icon-btn" aria-label="Open chat menu" title="Menu">⋯</button>
+        <!-- This toggles the sidebar visibility -->
+        <button class="icon-btn" id="menuBtn" aria-label="Toggle sidebar" title="Menu">⋯</button>
         <button class="icon-btn" aria-label="Close chat" title="Close">✕</button>
       </div>
     </header>
 
+    <!-- Sidebar must come BEFORE the chat for the sibling CSS rule to work -->
+    <aside class="sidebar" id="sidebar" aria-label="Conversations">
+      <div class="side-top">
+        <button id="newChatBtn" class="side-btn" type="button">＋ New</button>
+        <button id="sidebarToggle" class="side-toggle" type="button" aria-label="Hide sidebar">⟨ Hide</button>
+      </div>
+      <div class="side-list" id="threadList" role="list"></div>
+    </aside>
+
+
+    <!-- Static handle to reopen sidebar when hidden (JS will use it if present) -->
+   <button id="sidebarHandle" class="sidebar-handle" type="button" aria-label="Show chats" title="Show chats">☰</button>
+
+
+    <!-- Chat area -->
     <main class="chat" aria-live="polite">
       <div class="scroll" id="scroll">
         <div class="timeline" id="timeline">
@@ -38,16 +57,18 @@
             </div>
             <div>
               <div class="bubble">
-                <p><strong id="greet">Good evening Hosam!</strong> <span id="intro">You can select one of the suggested
-                    topics below to start a new chat or ask any other question.</span></p>
+                <p>
+                  <strong id="greet">Good evening Hosam!</strong>
+                  <span id="intro">
+                    You can select one of the suggested topics below to start a new chat or ask any other question.
+                  </span>
+                </p>
                 <div class="chips" id="chips">
-                  <button class="chip" data-text="Renew CPR">Renew CPR</button>
-                  <button class="chip" data-text="Pay traffic fines">Pay Traffic Fines</button>
-                  <button class="chip" data-text="Pay EWA bill">Pay EWA Bill</button>
-                  <button class="chip" data-text="Book NPRA appointment">Book NPRA Appointment</button>
+                  <button class="chip" data-text="Renew CPR" type="button">Renew CPR</button>
+                  <button class="chip" data-text="Pay traffic fines" type="button">Pay Traffic Fines</button>
+                  <button class="chip" data-text="Pay EWA bill" type="button">Pay EWA Bill</button>
+                  <button class="chip" data-text="Book NPRA appointment" type="button">Book NPRA Appointment</button>
                 </div>
-
-
               </div>
               <div class="time">05:03 PM 25/10/2025</div>
             </div>
@@ -56,6 +77,7 @@
       </div>
     </main>
 
+    <!-- Composer -->
     <form class="composer" id="composer" autocomplete="off" aria-label="Message composer">
       <div class="input-wrap">
         <div class="globe" aria-hidden="true">🌐</div>
